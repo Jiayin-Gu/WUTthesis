@@ -1,0 +1,106 @@
+\documentclass[a4paper, UTF8, zihao=-4]{ctexbook} %% CTeX宏集下的ctexbook文类，参数分别制定A4纸、源文件为UTF8编码格式，字号小四
+\usepackage[Chinesetype=理学, Englishtype=Science, Chinesedegree=博士, Englishdegree=Doctor]{WUTthesis} %% 学位类别：理学（Science）、工学（Engineering）等，学位：硕士（Master）、博士（Doctor），其中理学博士为默认设置
+\usepackage[backend=biber, maxbibnames=3, minbibnames=3, style=gb7714-2015, gbpub=false, gbnamefmt=lowercase]{biblatex} %% 文献处理宏包
+\usepackage[colorlinks, linkcolor=blue, anchorcolor=red, citecolor=blue]{hyperref} %% 负责各种交叉引用的宏包
+\usepackage{amssymb, amsfonts, amsmath, amsthm, mathtools} %% 和数学相关的一些宏包
+\usepackage{listings} %% 关于代码抄录的宏包
+\usepackage{multicol} %% 可以设置多列排版的宏包
+\usepackage{graphicx} %% 和插图相关的宏包
+\usepackage{txfonts, pxfonts} %% 数学字体宏包
+\usepackage{upgreek} %% 数学字体宏包
+\usepackage{mathrsfs} %% 数学字体红包
+\usepackage{setspace} %% 调整行距的宏包
+\usepackage{array} %% 制表宏包
+\usepackage[usenames, dvipsnames]{xcolor} %% 颜色宏包
+\usepackage{bigstrut} %% 该宏包提供 \bigstrut 命令，可以增大表格的行间距
+\usepackage{titlesec}  %% A package providing an interface to sectioning commands for selection from various title styles. 
+\usepackage[T1]{fontenc} %% 输出字体编码宏包，可选参数T1表明是T1编码
+\usepackage{inputenc} %% 输入字体编码宏包
+\usepackage{lmodern} %% 英文字体宏包 (Latin Modern Roman, Latin Modern Dunhill, Latin Modern Sans Serif, Latin Modern Sans Typewriter)
+\usepackage{emptypage} %% 此宏包负责的任务是当每一章最后一页是偶数页时，设置空白
+\usepackage[final]{pdfpages} %% 用于导入插入pdf文档的宏包
+
+
+
+
+\renewcommand{\theequation}{\thechapter-\arabic{equation}} %% 将公式代号中默认的“.”改为“-”
+\renewcommand{\thefigure}{\thechapter-\arabic{figure}} %% 将插图代号中默认的“.”改为“-”
+\renewcommand{\thetable}{\thechapter-\arabic{table}} %% 将表格代号中默认的“.”改为“-”
+
+
+\ctexset{chapter={format+={\zihao{-2}\heiti}, number={\arabic{chapter}}, afterskip={33pt}}} %% 设置章标题为字号小二，黑体，阿拉伯数字，章节标题与后面下方之间的距离为33pt
+\ctexset{section={format+={\zihao{3}\heiti}, afterskip={21pt}}} %% 设置节标题为字号三号，黑体，阿拉伯数字，章节标题与后面下方之间的距离为22pt
+\ctexset{subsection={format+={\zihao{4}\heiti}, afterskip={7pt}}} %% 设置小节标题为字号四号，黑体，阿拉伯数字，章节标题与后面下方之间的距离为7pt
+
+
+\renewcommand{\bibfont}{\zihao{5}} %% 设置参考文献字号五号
+\renewcommand{\bibauthorfont}{\bfseries\color{teal}} %% 设置参考文献中作者字段为粗体，蓝绿色
+\renewcommand{\bibtitlefont}{\color{blue}} %% 设置参考文献中名称字段为蓝色
+\renewcommand{\bibpubfont}{\itshape\color{violet}} %% 设置参考文献中出版项字段为斜体，紫色
+
+
+
+
+\renewcommand{\lstlistingname}{代码} %% 设置代码抄录的标题名为”代码“
+\lstset{basicstyle=\footnotesize\ttfamily, columns=fullflexible, numbers=left, numbersep=5pt, numberstyle=\tiny, backgroundcolor=\color{white}, frame=single, breaklines=true, showtabs=false, showspaces=false, showstringspaces=false, keywordstyle=\color{teal}, commentstyle=\color{blue}, stringstyle=\color{red}, numberstyle=\color{gray}, tabsize=8, breakatwhitespace=false, postbreak=\mbox{\textcolor{violet}{$\hookrightarrow$}\space}} %% 代码抄录的一系列设置
+\AtBeginDocument{\renewcommand\thelstlisting{\ifnum \c@chapter>\z@ \thechapter-\fi \@arabic\c@lstlisting}} %% 将代码抄录代号中默认的“.”改为“-”
+
+
+
+
+
+\setCJKfamilyfont{IPAMincho}{IPAMincho} %% 设置日文字体
+\setCJKfamilyfont{IPAGothic}{IPAGothic} %% 设置日文字体
+\setCJKfamilyfont{UnGungseo}{UnGungseo.ttf} %% 设置韩文字体
+\setCJKfamilyfont{gulim}{gulim.ttf} %% 设置韩文字体
+\newfontfamily\russian{DejaVu Serif} %% 设置俄文字体
+
+
+
+
+\addbibresource{Bibliography.bib} %% 加入参考文献书库库文件
+
+
+
+\begin{document}
+
+\input{Cover.tex} %% 插入封面文件
+\input{Dedications.tex} %% 插入“献给XXX“的文件，此文件可有可无，不需要是删除或注释即可
+\input{Declaration.tex} %% 插入”独创性声明“文件
+
+
+
+
+
+
+\frontmatter %% 开始前面部分，从此页码为罗马数字
+
+\input{Abstract.tex}
+
+\begin{spacing}{1.3} %% 可以适当调整spacing环境的参数，来控制目录的行距，以使得在必要的情况下将目录控制在两页之内
+\tableofcontents     %% 目录
+\end{spacing}
+
+
+
+
+\mainmatter %% 开始主体部分，从此页码为阿拉伯数字
+
+
+\def\path{Introduction}\input{\path/Chapter.tex} %% 导入第一章引言，Introduction为第一章文件夹名，\path 为对应的路径
+\def\path{WUTthesis}\input{\path/Chapter.tex}
+\def\path{Conclusion_and_perspective}\input{\path/Chapter.tex}
+\appendix\def\path{Appendices}\input{\path/Appendices.tex} %% 导入附录
+\begin{spacing}{1.3} %%可以适当调整spacing环境的参数，来控制参考文献的行距
+\printbibliography[heading=bibintoc, title={参考文献}] %% 打印参考文献，采用了不同的颜色来区分各参考文献条目的内容
+\end{spacing}
+
+
+\backmatter %% 开始后面部分
+
+
+\input{Achievements.tex} %% 作者简历及攻读学位期间发表的学术论文与研究成果
+\input{Acknowledgements.tex} %% 致谢
+
+
+\end{document}

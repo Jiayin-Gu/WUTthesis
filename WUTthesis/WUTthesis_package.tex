@@ -1,0 +1,69 @@
+\section{\texttt{WUTthesis}宏包}
+
+\par 一般而言，\texttt{WUTthesis}指代的是整个模板，然而为了方便，也将包含在整个模板中的宏包文件设置为同名的\texttt{WUTthesis.sty}。当导入\texttt{WUTthesis}宏包时需要提供如下参数：
+\begin{itemize}
+\item Chinesetype，学位类别的中文名称，默认理学；
+\item Englishtype，学位类别的英文名称，默认Science；
+\item Chinesedegree，学位级别的中文名称，默认博士；
+\item Englishdegree，学位级别的英文名称，默认Doctor。
+\end{itemize}
+\texttt{WUTthesis.sty}宏包文件中包含如下代码
+\begin{lstlisting}[language=TeX]
+\RequirePackage[text={160mm, 230mm}, left=28mm, vmarginratio=1:1]{geometry}
+\RequirePackage{fancyhdr}
+\RequirePackage{xkeyval}
+\RequirePackage{changepage}
+\end{lstlisting}
+这表示\texttt{geometry}、\texttt{fancyhdr}、\texttt{xkeyval}、\texttt{changepage}四个宏包会被加载，因此当在\texttt{Thesis.tex}中无需再加载。其中，宏包\texttt{geometry}的参数设置了版心的大小为$160mm\times 230mm$，距离A4指左边距离$28mm$（意思是靠书脊一侧空白为$28mm$），上下空白比例$1:1$。这里有必要提一下A4纸张的大小为$210mm\times 297mm$，根据设定的版心大小和位置，内测的空白为$28mm$，靠外的空白为$22mm$，这样的不对称是为了补偿论文打印胶装后由于书脊的存在而造成整个版面内测的损失。然而，对于第一页的封面，我们又通过\texttt{changepage}宏包提供的\texttt{adjustwidth}环境调整了版心位置，使其居中。自制的\texttt{WUTthesis}中对页眉进行了设置，使得相应文字为灰色、宋体、字号小五，还将页码设置为每页底部居中。另外，还通过{\STZhongsong 华文中宋}字体文件\texttt{STZhongsong.ttf}定义了相应的字体。这里，鼓励用户查看\texttt{WUTthesis.sty}，了解具体细节。
+
+
+
+
+
+
+
+\subsection{自定义命令}
+
+\par \texttt{WUTthesis}宏包中的自定义命令包括：
+\begin{itemize}
+\item \verb"\WUTclassificationnumber{}"，分类号；
+\item \verb"\WUTconfidentiality{}"，密级：只有涉密论文才填写；
+\item \verb"\WUTUDC{}"，UDC；
+\item \verb"\WUTuniversitycode{10497}"，学校代码，参数为10497；
+\item \verb"\WUTChinesetitle{}"，论文中文题目；
+\item \verb"\WUTEnglishtitle{}{}"，论文英文题目，由于一般英文题目过长，这里分成两行，所以这里相应地设置两个参数；
+\item \verb"\WUTauthor{}{}"，论文作者：中文姓名、英文姓名；
+\item \verb"\WUTsupervisor{}{}{}{}{}{}"，指导教师：中文姓名、英文姓名、职称、学位、单位名称、邮编；
+\item \verb"\WUTvicesupervisor{}{}{}{}{}{}"，副指导教师：开关（只有on和off两个选项, 表明是否有副导师，如没有则在封面中不显示相关字段）、中文姓名、职称、学位、单位名称、邮编；
+\item \verb"\WUTmajor{}{}"，二级学科：中文专业名称、英文专业名称；
+\item \verb"\WUTinstitute{}"，院系名称；
+\item \verb"\WUTcommitteechairman{}"，答辩委员会主席；
+\item \verb"\WUTreviewers{}{}"，两个评阅人；
+\item \verb"\WUTdegreeorganization{}"，学位授予单位，即“武汉理工大学”；
+\item \verb"\WUTdates{}{}{}{}{}"，论文完成日期、论文提交日期、论文答辩日期、学位授予日期（格式为：xxxx年xx月）、英文日期（格式为: May, 2020）；
+\item \verb"\WUTdegreeabbreviation{}"，学位级别类型缩写，如Ph.D.，M.S.等；
+\item \verb"\WUTChinesekeywords{}"，中文关键字；
+\item \verb"\WUTEnglishkeywords{}"，英文关键字，字体会自动设置为{\fontfamily{ptm}\selectfont Times New Roman}；
+\item \verb"\STZhongsong"，声明形式的华文中宋字体设置。
+\item \verb"\WUTmakefirstcover"，生成封面一 (包含其背面的英文封面)；
+\item \verb"\WUTmakesecondcover"，生成封面二；
+\end{itemize}
+
+
+
+
+
+\subsection{自定义环境}
+
+
+\par \texttt{WUTthesis}宏包中自定义的一些环境包括：
+\begin{itemize}
+\item \texttt{WUTChineseabstract}，中文摘要环境；
+\item \texttt{WUTEnglishabstract}，英文摘要环境，字体会自动设置为{\fontfamily{ptm}\selectfont Times New Roman}；
+\item \texttt{WUTacknowledgements}，致谢环境，字体会自动设置为{\kaishu 楷书}。
+\item \texttt{WUTquote}，引述环境，该环境必须提供一个参数，指明引述内容的出处。
+\end{itemize}
+
+
+
+

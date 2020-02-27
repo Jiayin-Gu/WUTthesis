@@ -1,0 +1,190 @@
+\chapter{{\LaTeX}工具箱}
+
+
+
+
+\section{更多英文字体}
+\par 表 \ref{tab_more_English_fonts} 列出更多英文字体，供用户根据实际需要使用。
+\begin{table}
+\caption{更多英文字体。}
+\begin{center}
+\begin{tabular}{>{\centering\arraybackslash}m{8.0cm}|>{\centering\arraybackslash}m{2.0cm}|>{\centering\arraybackslash}m{4.0cm}}
+\hline
+\hline
+字体 & 字体码 & 示例 \bigstrut \\ \hline
+Computer Modern Roman & \texttt{cmr} & {\fontfamily{cmr}\selectfont ABCDabcd1234} \bigstrut \\ \hline
+Computer Modern Sans Serif & \texttt{cmss} & {\fontfamily{cmss}\selectfont ABCDabcd1234} \bigstrut \\ \hline
+Computer Modern Typerwriter & \texttt{cmtt} & {\fontfamily{cmtt}\selectfont ABCDabcd1234} \bigstrut \\ \hline
+Latin Modern Roman & \texttt{lmr} & {\fontfamily{lmr}\selectfont ABCDabcd1234} \bigstrut \\ \hline
+Latin Modern Sans Serif & \texttt{lmss} & {\fontfamily{lmss}\selectfont ABCDabcd1234} \bigstrut \\ \hline
+Latin Modern Sans Typerwriter & \texttt{lmtt} & {\fontfamily{lmtt}\selectfont ABCDabcd1234} \bigstrut \\ \hline
+Latin Modern Dunhill & \texttt{lmdh} & {\fontfamily{lmdh}\selectfont ABCDabcd1234} \bigstrut \\ \hline
+Times & \texttt{ptm} & {\fontfamily{ptm}\selectfont ABCDabcd1234} \bigstrut \\ \hline
+Utopia/Fourier & \texttt{put} & {\fontfamily{put}\selectfont ABCDabcd1234} \bigstrut \\ \hline
+Palatino & \texttt{ppl} & {\fontfamily{ppl}\selectfont ABCDabcd1234} \bigstrut \\ \hline
+Pookman & \texttt{pbk} & {\fontfamily{pbk}\selectfont ABCDabcd1234} \bigstrut \\ \hline
+Charter & \texttt{bch} & {\fontfamily{bch}\selectfont ABCDabcd1234} \bigstrut \\ \hline
+Helvetica & \texttt{phv} & {\fontfamily{phv}\selectfont ABCDabcd1234} \bigstrut \\ \hline
+Courier & \texttt{pcr} & {\fontfamily{pcr}\selectfont ABCDabcd1234} \bigstrut \\ \hline
+{\TeX} Gyre Termes & \texttt{qtm} & {\fontfamily{qtm}\selectfont ABCDabcd1234} \bigstrut \\ \hline
+{\TeX} Gyre Pagella & \texttt{qpl} & {\fontfamily{qpl}\selectfont ABCDabcd1234} \bigstrut \\ \hline
+{\TeX} Gyre Bonum & \texttt{qbk} & {\fontfamily{qbk}\selectfont ABCDabcd1234} \bigstrut \\ \hline
+{\TeX} Gyre Schola & \texttt{qcs} & {\fontfamily{qcs}\selectfont ABCDabcd1234} \bigstrut \\ \hline
+{\TeX} Gyre Adventor & \texttt{qag} & {\fontfamily{qag}\selectfont ABCDabcd1234} \bigstrut \\ \hline
+{\TeX} Gyre Heros & \texttt{qhv} & {\fontfamily{qhv}\selectfont ABCDabcd1234} \bigstrut \\ \hline
+{\TeX} Gyre Cursor & \texttt{qcr} & {\fontfamily{qcr}\selectfont ABCDabcd1234} \bigstrut \\ \hline
+\hline
+\end{tabular}
+\end{center}
+\label{tab_more_English_fonts}
+\end{table}
+
+\section{一些西欧字符的输入}
+\par 由于源文件采用的UTF8编码方式，所以一些带修饰的西欧字符可以直接输入，然而这对于长期习惯于英文输入的用户来说，可能会有一些困难。下面列出一些通过命令的方式来产生一些带修饰的字符：
+\begin{itemize}
+\item \verb"\`a", \`a；
+\item \verb"\'e", \'e；
+\item \verb"\""o, \"o；
+\item \verb"\^u", \^u；
+\item \verb"\c{c}", \c{c}；
+\item \verb"\v{Z}", \v{Z}。
+\end{itemize}
+
+
+
+
+
+
+\section{数学符号}
+
+\begin{table}
+\caption{Other Builtin Mathematical Relations, Operators, Symbols, Decorations, and Expressions in {\LaTeX}}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|} \hline
+\verb"\Delta"  & $\Delta$ & \verb"\div" & $\div$ & \verb"\times" & $\times$ \bigstrut \\ \hline
+\verb"\lim" & $\lim$ & \verb"\infty"  & $\infty$ & \verb"\sqrt{a}" & $\sqrt{a}$ \bigstrut \\ \hline
+\verb"\frac{a}{b}" & $\frac{a}{b}$ & \verb"\infty" & $\infty$ & \verb"\circ"  & $\circ$ \bigstrut \\ \hline
+\verb"\equiv" & $\equiv$ & \verb"\pm" & $\pm$ & \verb"{\rm text}" & ${\rm text}$  \bigstrut \\ \hline
+\verb"\mp"  & $\mp$ & \verb"\star" & $\star$ & \verb"\sim" & $\sim$ \bigstrut \\ \hline
+\verb"\simeq" & $\simeq$ & \verb"\approx"  & $\approx$ & \verb"\mp" & $\mp$ \bigstrut \\ \hline
+\verb"\codt" & $\cdot$ & \verb"\partial" & $\partial$ & \verb"\doteq"  & $\doteq$ \bigstrut \\ \hline
+\verb"\cong" & $\cong$ & \verb"\parallel" & $\parallel$ & \verb"\perp" & $\perp$  \bigstrut \\ \hline
+\verb"\oint"  & $\oint$ & \verb"\nabla" & $\nabla$ & \verb"\int" & $\int$ \bigstrut \\ \hline
+\verb"\Box" & $\Box$ & \verb"\propto"  & $\propto$ & \verb"\sum" & $\sum$ \bigstrut \\ \hline
+\verb"\hbar" & $\hbar$ & \verb"\dagger" & $\dagger$  & \verb"\forall"  & $\forall$ \bigstrut \\ \hline
+\verb"\exists" & $\exists$ & \verb"\uparrow" & $\uparrow$ & \verb"\downarrow" & $\downarrow$  \bigstrut \\ \hline
+\verb"\neq"  & $\neq$ & \verb"\leq" & $\leq$ & \verb"\geq" & $\geq$ \bigstrut \\ \hline
+\verb"\rightarrow" & $\rightarrow$  & \verb"\Rightarrow"  & $\Rightarrow$ & \verb"\Lefrightarrow" & $\Leftrightarrow$ \bigstrut \\ \hline
+\verb"\in" & $\in$ & \verb"\to" & $\to$ & \verb"\gg"  & $\gg$ \bigstrut \\ \hline
+\verb"\circleddot" & $\circleddot$ & \verb"\ll" & $\ll$ & \verb"\prod" & $\prod$  \bigstrut \\ \hline
+\verb"\langle"  & $\langle$ & \verb"\rangle" & $\rangle$ & \verb"\angle" & $\rangle$ \bigstrut \\ \hline
+\verb"\prime" & $\prime$  & \verb"\wedge"  & $\wedge$ & \verb"\slash" & $\slash$ \bigstrut \\ \hline
+\verb"{\boldsymbol\lambda}" & ${\boldsymbol\lambda}$ & \verb"a_m^n" & $a_m^n$ & & \bigstrut \\ \hline
+\end{tabular}
+\end{center}
+\label{tab_math_1}
+\end{table}
+
+
+
+
+
+
+\begin{table}
+\caption{Dots in Math Mode}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|} \hline
+\verb"\cdots"  & $\cdots$ & \verb"\dots" & $\dots$ & \verb"\dotsb" & $\dotsb$ & \verb"\dotsc" & $\dotsc$  \bigstrut \\ \hline
+\verb"\dotsi"  & $\dotsi$ & \verb"\dotsm" & $\dotsm$ & \verb"\dotso" & $\dotso$ & \verb"\ldots" & $\ldots$  \bigstrut \\ \hline
+\verb"\vdots"  & $\vdots$ & \verb"\reflectbox{$\ddots$}" & $\reflectbox{$\ddots$}$ & \verb"\ddots" & $\ddots$ &  &   \bigstrut \\ \hline
+\end{tabular}
+\end{center}
+\label{tab_math_2}
+\end{table}
+
+
+
+
+
+
+
+
+\begin{table}
+\caption{Math-mode Accents}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|} \hline
+\verb"\acute{a}"  & $\acute{a}$ & \verb"\check{a}" & $\check{a}$ & \verb"\grave{a}" & $\grave{a}$ & \verb"\tilde{a}" & $\tilde{a}$  \bigstrut \\ \hline
+\verb"\bar{a}"  & $\bar{a}$ & \verb"\ddot{a}" & $\ddot{a}$ & \verb"\hat{a}" & $\hat{a}$ & \verb"\vec{a}" & $\vec{a}$  \bigstrut \\ \hline
+\verb"\breve{a}"  & $\breve{a}$ & \verb"\dot{a}" & $\dot{a}$ & \verb"\mathring{a}" & $\mathring{a}$ &  &   \bigstrut \\ \hline
+\end{tabular}
+\end{center}
+\label{tab_math_3}
+\end{table}
+
+
+
+
+
+
+
+
+\begin{table}
+\caption{Brackets and Parentheses in Math Mode}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|} \hline
+\verb"\big(" & $\big($ & \verb"\Big(" & $\Big($ & \verb"\bigg(" & $\bigg($ & \verb"\Bigg(" & $\Bigg($ \bigstrut \\ \hline
+\verb"\big[" & $\big[$ & \verb"\Big[" & $\Big[$ & \verb"\bigg[" & $\bigg[$ & \verb"\Bigg[" & $\Bigg[$ \bigstrut \\ \hline
+\verb"\big\{" & $\big\{$ & \verb"\Big\{" & $\Big\{$ & \verb"\bigg\{" & $\bigg\{$ & \verb"\Bigg\{" & $\Bigg\{$ \bigstrut \\ \hline
+\verb"\big\langle" & $\big\langle$ & \verb"\Big\langle" & $\Big\langle$ & \verb"\bigg\langle" & $\bigg\langle$ & \verb"\Bigg\langle" & $\Bigg\langle$ \bigstrut \\ \hline
+\end{tabular}
+\end{center}
+\label{tab_math_4}
+\end{table}
+
+
+
+
+
+
+
+\begin{table}
+\caption{\texttt{upgreek} Upright Greek Letters in \LaTeX}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|} \hline
+\verb"\upalpha"  & $\upalpha$ & \verb"\upbeta" & $\upbeta$ & \verb"\upgamma" & $\upgamma$ & \verb"\updelta" & $\updelta$  \bigstrut \\ \hline
+\verb"\upepsilon"  & $\upepsilon$ & $\verb"\upvarepsilon"$ & $\upvarepsilon$ & \verb"\upzeta" & $\upzeta$ & \verb"\upeta" & $\upeta$   \bigstrut \\ \hline
+\verb"\uptheta"  & $\uptheta$ & \verb"\upvartheta" & $\upvartheta$ & \verb"\upiota" & $\upiota$ & \verb"\upkappa" & $\upkappa$   \bigstrut \\ \hline
+\verb"\uplambda"  & $\uplambda$ & \verb"\upmu" & $\upmu$ & \verb"\upnu" & $\upnu$ & \verb"\upxi" & $\upxi$   \bigstrut \\ \hline
+\verb"\uppi"  & $\uppi$ & \verb"\upvarpi" & $\upvarpi$ & \verb"\uprho" & $\uprho$ & \verb"\upvarrho" & $\upvarrho$   \bigstrut \\ \hline
+\verb"\upsigma"  & $\upsigma$ & \verb"\upvarsigma" & $\upvarsigma$ & \verb"\uptau"  & $\uptau$ & \verb"\upupsilon" & $\upupsilon$   \bigstrut \\ \hline
+\verb"\upphi"  & $\upphi$ & \verb"\upvarphi"  & $\upvarphi$ & \verb"\upchi" & $\upchi$ & \verb"\uppsi" & $\uppsi$   \bigstrut \\ \hline
+\verb"\upomega"  & $\upomega$ & \verb"\Upgamma"  & $\Upgamma$  & \verb"\Updelta"  & $\Updelta$  & \verb"\Uptheta"  & $\Uptheta$ \bigstrut \\ \hline
+\verb"\Uplambda"  & $\Uplambda$  & \verb"\Upxi"  & $\Upxi$  & \verb"\Uppi"  & $\Uppi$  & \verb"\Upsigma"  & $\Upsigma$ \bigstrut \\ \hline
+\verb"\Upupsilon"  & $\Upupsilon$  & \verb"\Uppsi"  &  $\Uppsi$  & \verb"\Upphi"  & $\Upphi$  & \verb"\Upomega"  & $\Upomega$ \bigstrut \\ \hline
+\end{tabular}
+\end{center}
+\label{tab_math_5}
+\end{table}
+
+
+
+
+
+\begin{table}
+\caption{\texttt{txfonts/pxfonts} Upright Greek Letters in \LaTeX}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|} \hline
+\verb"\alphaup"  & $\alphaup$ & \verb"\betaup" & $\betaup$ & \verb"\gammaup" & $\gammaup$ & \verb"\deltaup" & $\deltaup$  \bigstrut \\ \hline
+\verb"\epsilonup"  & $\epsilonup$ & $\verb"\varepsilonup"$ & $\varepsilonup$ & \verb"\zetaup" & $\zetaup$ & \verb"\etaup" & $\etaup$   \bigstrut \\ \hline
+\verb"\thetaup"  & $\thetaup$ & \verb"\varthetaup" & $\varthetaup$ & \verb"\iotaup" & $\iotaup$ & \verb"\kappaup" & $\kappaup$   \bigstrut \\ \hline
+\verb"\lambdaup"  & $\lambdaup$ & \verb"\muup" & $\muup$ & \verb"\nuup" & $\nuup$ & \verb"\xiup" & $\xiup$   \bigstrut \\ \hline
+\verb"\piup"  & $\piup$ & \verb"\varpiup" & $\varpiup$ & \verb"\rhoup" & $\rhoup$ & \verb"\varrhoup" & $\varrhoup$   \bigstrut \\ \hline
+\verb"\sigmaup"  & $\sigmaup$ & \verb"\varsigmaup" & $\varsigmaup$ & \verb"\tauup"  & $\tauup$ & \verb"\upsilonup" & $\upsilonup$   \bigstrut \\ \hline
+\verb"\phiup"  & $\phiup$ & \verb"\varphiup"  & $\varphiup$ & \verb"\chiup" & $\chiup$ & \verb"\psiup" & $\psiup$   \bigstrut \\ \hline
+\verb"\omegaup"  & $\omegaup$ &  &  &  &  &  &    \bigstrut \\ \hline
+\end{tabular}
+\end{center}
+\label{tab_math_6}
+\end{table}
+
+

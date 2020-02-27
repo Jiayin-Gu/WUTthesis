@@ -1,0 +1,94 @@
+\section{外国文字字体}
+
+\par 由于我们对源文件采用了UTF8的编码方式，所以在源文件中可以直接输入各国的文字。然而，为了能够使得各国文字能够在最终生成的pdf文档中显示，一般情况下需要在源文件对外国文字指定相应的字体。中、日、韩文字同属东北亚文字，排版方式相近，所以可一通过\texttt{xeCJK}宏包可以定义一些相关字体（安装或直接子字体文件的形式放置于\texttt{WUTthesis}文件夹下），而\texttt{xeCJK}宏包在使用{\CTeX}宏集提供的\texttt{ctexbook}文类时已经自动导入了。下面列出一些在\texttt{Thesis.tex}导言区添加了日、韩、俄三种文字的字体设置：
+\begin{itemize}
+\item \verb"\setCJKfamilyfont{IPAMincho}{IPAMincho}"，设置日文字体；
+\item \verb"\setCJKfamilyfont{IPAGothic}{IPAGothic}"，设置日文字体；
+\item \verb"\setCJKfamilyfont{UnGungseo}{UnGungseo.ttf}"，设置韩文字体；
+\item \verb"\setCJKfamilyfont{gulim}{gulim.ttf}"，设置韩文字体；
+\item \verb"\newfontfamily\russian{DejaVu Serif}"，设置俄文字体；
+\end{itemize}
+上述的字体系统均已经安装。更多字体的设置，就需要用户发挥主观能动性查找一些网络资料了。
+
+
+\subsection{英文字体（西欧文字）}
+\par 英文字体分为三类，分别是罗马体字族（\textrm{Roman Family}）、等宽体字族（\textsf{San Serif Family}）、等线体字族（\texttt{Typewriter Family}）\footnote{有些书籍或相关资料中也将这三类字体称为衬线字族 (Serif)、非衬线字族 (Sans Serif)、等宽字群 (Monospace)。}。本文所使用的对应的三类字族具体为Latin Modern Roman，\textsf{Latin Modern Sans Serif}和\texttt{Latin Modern Sans Typerwriter}\footnote{Latin Modern系列字体是Computer Modern系列字体的加强版本，后者是早期Donald E. Knuth在开发{\TeX}排版系统时所开发的系列字体。}，其中Latin Modern Roman为常规默认的英文字体。表 \ref{tab_font_style} 中列出了一些字体设置命令以及相应的样式。一些字体设置命令的声明形式有它们对应的简化形式，分别是：\verb"\rm" 等价于 \verb"\rmfamily"，\verb"\sf" 等价于 \verb"\sffamily"，\verb"\tt" 等价于 \verb"\ttfamily"，\verb"\bf" 等价于 \verb"\bfseries"，\verb"\it" 等价于 \verb"\itshape"，\verb"\sc" 等价于 \verb"\scshape"，\verb"\sl" 等价于 \verb"\slshape"。这些等价形式的命令在有些复合字体设置情况下和原有形式其实并不能做到完全意义上的等价，所以使用须谨慎。和中文字体设置一样，一些英文字体设置命令可以作为环境名，组成字体设置环境，例如加粗环境
+\begin{lstlisting}[language=TeX]
+\begin{bfseries}
+这是字体加粗环境
+\end{bfseries}
+\end{lstlisting}
+
+
+
+
+\begin{table}
+\caption{英文字体设置命令及样式。}
+\begin{center}
+\begin{tabular}{>{\centering\arraybackslash}m{3.0cm}|>{\centering\arraybackslash}m{2.5cm}|>{\centering\arraybackslash}m{4.0cm}|>{\centering\arraybackslash}m{3.0cm}}
+\hline
+\hline
+参数形式 & 声明形式 & 字样 & 说明 \bigstrut \\ \hline
+\verb"\textrm{}" & \verb"\rmfamily" & \textrm{Roman Family} & 罗马体字族 \bigstrut \\ \hline
+\verb"\textsf{}" & \verb"\sffamily" & \textsf{San Serif Family} & 等线体字族 \bigstrut \\ \hline
+\verb"\texttt{}" & \verb"\ttfamily" & \texttt{Typewriter Family} & 罗宽体字族 \bigstrut \\ \hline
+\verb"\textbf{}" & \verb"\bfseries" & \textbf{Boldface Series} & 粗宽序列 \bigstrut \\ \hline
+\verb"\textmd{}" & \verb"\mdseries" & \textmd{Medium Series} & 常规序列 \bigstrut \\ \hline
+\verb"\textit{}" & \verb"\itshape"  & \textit{Italic Shape} & 斜体形状 \bigstrut \\ \hline
+\verb"\textsc{}" & \verb"\scshape"  & \textsc{Small Caps Shape} & 小型大写形状 \bigstrut \\ \hline
+\verb"\textsl{}" & \verb"\slshape"  & \textsl{Slanted Shape} & 倾斜形状 \bigstrut \\ \hline
+\verb"\textup{}" & \verb"\upshape"  & \textup{Upright Shape} & 直立形状 \bigstrut \\ \hline
+\verb"\textnormal{}" & \verb"\normalfont" & \textnormal{Normal Style} & 常规字体 \bigstrut \\ \hline
+\verb"\emph{}" & \verb"\em" & \emph{emphasized text} & 强调某段文字 \bigstrut \\ \hline
+\hline
+\end{tabular}
+\end{center}
+\label{tab_font_style}
+\end{table}
+
+\par {\CTeX}宏集中还在中文字体和三类英文字族之间建立了对应关系，宋体对应罗马体字族，黑体对应等线体字族，仿宋对应等宽体字族，即 \verb"\textsf{}" 作用到中文汉字相当于设置黑体，\verb"\texttt{}" 作用到中文汉字相当于设置仿宋。此外，{\CTeX}宏集还将楷书对应到英文斜体形状，即 \verb"\textit{}" 作用到中文汉字相当于设置楷书。这里，我们有必要介绍如何设置{\fontfamily{ptm}\selectfont Times New Roman}字体，这是另一种常见的英文字体，属于罗马体字族。该字体设置方法为
+\begin{lstlisting}[language=TeX]
+{\fontfamily{ptm}\selectfont text}
+\end{lstlisting}
+其中，\texttt{ptm}为对应的字体码。\texttt{WUTthesis}的英文摘要环境中已经自动设置了{\fontfamily{ptm}\selectfont Times New Roman}字体。根据各种字体的视觉特点，通常论文的正文使用罗马体字族，专有名词或程序命令选用等宽体字族。表 \ref{tab_more_English_fonts} 列出了更多的英文字体。
+
+
+
+\subsection{日文字体}
+\begin{itemize}
+\item \verb"{\CJKfamily{IPAMincho} 日文}"，{\CJKfamily{IPAMincho} 山川の異域は，風月天と同じである。}
+\item \verb"{\CJKfamily{IPAGothic} 日文}"，{\CJKfamily{IPAGothic} 山川の異域は，風月天と同じである。}
+\end{itemize}
+
+
+
+
+
+\subsection{韩文字体}
+
+\begin{itemize}
+\item \verb"{\CJKfamily{UnGungseo} 韩文}"，{\CJKfamily{UnGungseo} 클래식}。
+\item \verb"{\CJKfamily{gulim} 韩文}"，{\CJKfamily{gulim} 클래식}。
+\end{itemize}
+
+\subsection{俄文字体}
+
+\begin{itemize}
+\item \verb"{\russian 俄文}"
+\end{itemize}
+\begin{center}
+\russian 
+{\large Я вас любил ---А.С. Пушкин} \\
+\vspace{0.5cm}
+Я вас любил: любовь еще, быть может, \\
+В душе моей угасла не совсем; \\
+Но пусть она вас больше не тревожит; \\
+Я не хочу печалить вас ничем. \\
+Я вас любил безмолвно, безнадежно, \\
+То робостью, то ревностью томим; \\
+Я вас любил так искренно, так нежно, \\
+Как дай вам бог любимой быть другим. \\
+\end{center}
+
+
+

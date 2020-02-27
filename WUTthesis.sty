@@ -1,0 +1,305 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{WUTthesis}[A Package used in Writing Thesis by Postgraduates of Wuhan University of Technology]
+
+
+\RequirePackage[text={160mm, 230mm}, left=28mm, vmarginratio=1:1]{geometry} %% 负责版面设计的宏包
+\RequirePackage{fancyhdr} %% 负责控制页眉、页脚相关设置的宏包
+\RequirePackage{xkeyval} %% This package is an extension of the keyval package and offers additional macros for setting keys and declaring and setting class or package options. 
+\RequirePackage{changepage} %% 负责改变版心大小的宏包，提供adjustwidth环境设置封面的版心大小
+
+
+
+\def\wutChinesetype{}
+\def\wutEnglishtype{}
+\def\wutChinesedegree{}
+\def\wutEnglishdegree{}
+
+\DeclareOptionX{Chinesetype}{\def\wutChinesetype{#1}}
+\ExecuteOptionsX{Chinesetype=理学}% Preset keys, '理学' being the default here
+
+\DeclareOptionX{Englishtype}{\def\wutEnglishtype{#1}}
+\ExecuteOptionsX{Englishtype=Science}% Preset keys, 'Science' being the default here
+
+\DeclareOptionX{Chinesedegree}{\def\wutChinesedegree{#1}}
+\ExecuteOptionsX{Chinesedegree=博士}% Preset keys, '博士' being the default here
+
+\DeclareOptionX{Englishdegree}{\def\wutEnglishdegree{#1}}
+\ExecuteOptionsX{Englishdegree=Doctor}% Preset keys, 'Doctor' being the default here
+
+\DeclareOptionX*{\PackageWarning{WUTthesis}{`\CurrentOption' ignored}}% For unknown options
+\ProcessOptionsX\relax
+
+
+
+
+
+
+
+
+\setCJKfamilyfont{STZhongsong}{[STZhongsong.ttf]} %% 从华文中宋字体文件STZhongsong.ttf中取字，来定义相应字体，对应的字体设置命令为\CJKfamily{STZhongsong}
+\newcommand{\STZhongsong}{\CJKfamily{STZhongsong}} %% 将\CJKfamily{STZhongsong}重新定义为更为简洁的\STZhongsong
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[OC]{\color{gray}\zihao{5}\songti 武汉理工大学\wutChinesedegree 学位论文} %% 设置开启页（奇数页）页眉为灰色、字号五号、宋体
+\fancyhead[EC]{\color{gray}\zihao{5}\songti 武汉理工大学\wutChinesedegree 学位论文} %% 设置关闭页（偶数页）页眉为灰色、字号五号、宋体
+\fancyfoot[EC, OC]{\thepage} %% 设置页码位于每页底部居中位置
+\fancypagestyle{plain}{\renewcommand{\headrulewidth}{0pt}\fancyhf{}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\def\wutclassificationnumber{}
+\newcommand{\WUTclassificationnumber}[1]{\def\wutclassificationnumber{#1}} %% 分类号
+\def\wutconfidentiality{}
+\newcommand{\WUTconfidentiality}[1]{\def\wutconfidentiality{#1}}
+\def\wutUDC{}
+\newcommand{\WUTUDC}[1]{\def\wutUDC{#1}} %% UDC
+\def\wutuniversitycode{}
+\newcommand{\WUTuniversitycode}[1]{\def\wutuniversitycode{#1}} %% 学校代码
+
+
+\def\wutdegreeabbreviation{}
+\newcommand{\WUTdegreeabbreviation}[1]{\def\wutdegreeabbreviation{#1}}
+
+
+
+\def\wutChinesetitle{}
+\newcommand{\WUTChinesetitle}[1]{\def\wutChinesetitle{#1}}
+\def\wutEnglishtitlefirstline{}
+\def\wutEnglishtitlesecondline{}
+\newcommand{\WUTEnglishtitle}[2]{\def\wutEnglishtitlefirstline{#1} \def\wutEnglishtitlesecondline{#2}}
+
+\def\wutauthorChinesename{}
+\def\wutauthorEnglishname{}
+\newcommand{\WUTauthor}[2]{\def\wutauthorChinesename{#1} \def\wutauthorEnglishname{#2}}
+
+\def\wutsupervisorChinesename{}
+\def\wutsupervisorEnglishname{}
+\def\wutsupervisortitle{}
+\def\wutsupervisordegree{}
+\def\wutsupervisororganization{}
+\def\wutsupervisorzipcode{}
+\newcommand{\WUTsupervisor}[6]{\def\wutsupervisorChinesename{#1} \def\wutsupervisorEnglishname{#2} \def\wutsupervisortitle{#3} \def\wutsupervisordegree{#4} \def\wutsupervisororganization{#5} \def\wutsupervisorzipcode{#6}} %% 指导教师：中文姓名、英文姓名、职称、学位、单位名称、邮编
+
+\def\wutvicesupervisorswitch{}
+\def\wutvicesupervisorname{}
+\def\wutvicesupervisortitle{}
+\def\wutvicesupervisordegree{}
+\def\wutvicesupervisororganization{}
+\def\wutvicesupervisorzipcode{}
+\newcommand{\WUTvicesupervisor}[6]{\def\wutvicesupervisorswitch{#1} \def\wutvicesupervisorname{#2} \def\wutvicesupervisortitle{#3} \def\wutvicesupervisordegree{#4} \def\wutvicesupervisororganization{#5} \def\wutvicesupervisorzipcode{#6}} %% 指导教师：有无（on/off）、中文姓名、职称、学位、单位名称、邮编
+
+
+
+
+
+
+\def\wutmajorChinesename{}
+\def\wutmajorEnglishname{}
+\newcommand{\WUTmajor}[2]{\def\wutmajorChinesename{#1} \def\wutmajorEnglishname{#2}}
+
+\def\wutinstitute{}
+\newcommand{\WUTinstitute}[1]{\def\wutinstitute{#1}}
+\def\wutcommitteechairman{}
+\newcommand{\WUTcommitteechairman}[1]{\def\wutcommitteechairman{#1}}
+\def\wutfirstreviewer{}
+\def\wutsecondreviewer{}
+\newcommand{\WUTreviewers}[2]{\def\wutfirstreviewer{#1} \def\wutsecondreviewer{#2}}
+\def\wutdegreeorganization{}
+\newcommand{\WUTdegreeorganization}[1]{\def\wutdegreeorganization{#1}} %% 学位授予单位
+\def\wutdateofthesiscompletion{}
+\def\wutdateofthesissubmission{}
+\def\wutdateofthesisdefense{}
+\def\wutdateofdegreeaward{}
+\def\wutdateEnglish{}
+\newcommand{\WUTdates}[5]{\def\wutdateofthesiscompletion{#1} \def\wutdateofthesissubmission{#2} \def\wutdateofthesisdefense{#3} \def\wutdateofdegreeaward{#4} \def\wutdateEnglish{#5}}
+
+
+
+
+
+
+
+\newcommand{\WUTChinesekeywords}[1]{\vspace{\baselineskip}\noindent\textbf{关键词：} #1} %% 中文关键字命令定义，关键字和上面的摘要之间保持一行的间距
+\newcommand{\WUTEnglishkeywords}[1]{\vspace{\baselineskip}\noindent\textbf{Key words:} {\fontfamily{ptm}\selectfont #1}} %% 英文关键字命令定义，且关键字字体设置为 Times New Roman，关键字和上面的摘要之间保持一行的间距
+
+
+
+
+\newenvironment{WUTChineseabstract}[1]{\chapter*{\heiti\zihao{-3} 摘要}\addcontentsline{toc}{chapter}{摘要}}{\par} %% 中文摘要环境定义，正文中“摘要”二字设置为黑体，字号小三
+
+\newenvironment{WUTEnglishabstract}[1]{\chapter*{\zihao{-3}Abstract}﻿\addcontentsline{toc}{chapter}{Abstract}\fontfamily{ptm}\selectfont}{\par} %% 英文摘要环境定义，正文中的“Abstract”设置为字号小三
+
+\newenvironment{WUTacknowledgements}[1]{\chapter{致谢}\kaishu}{\par} %% 致谢环境定义，正文中的文字字体设置为楷书
+
+
+
+
+\newenvironment{WUTquote}[2][2em]{\setlength{\@tempdima}{#1}\def\chapquote@author{#2}\parshape 1 \@tempdima \dimexpr\textwidth-2\@tempdima\relax\itshape}{\par\normalfont\hfill--- \chapquote@author\hspace*{\@tempdima}\par\bigskip} %% 引述环境定义
+
+
+
+
+
+
+
+
+
+
+\newcommand{\WUTmakefirstcover}{
+\begin{titlepage}
+\begin{adjustwidth}{-3mm}{3mm}
+\begin{center}
+\vspace{2cm}
+\resizebox{0.6\hsize}{!}{\includegraphics{WUT.jpg}} \\
+{\zihao{4}\songti (申请\wutChinesedegree 学位论文)}
+\vspace{2cm}
+\begin{spacing}{2.5}
+{\zihao{1}\heiti\wutChinesetitle}
+\end{spacing}
+\end{center}
+\vspace{2cm}
+\begin{spacing}{1.5}
+\zihao{3}\fangsong\bf
+\noindent\hspace{6cm} 培养单位：\wutinstitute \\
+\mbox{}\hspace{6cm} 学科专业：\wutmajorChinesename \\
+\mbox{}\hspace{6cm} 研\hspace{0.3cm}究\hspace{0.3cm}生：\wutauthorChinesename \\
+\mbox{}\hspace{6cm} 指导教师：\wutsupervisorChinesename
+\end{spacing}
+\vspace{1.5cm}
+{\hspace{8cm}\zihao{4}\heiti\wutdateofthesiscompletion}
+\end{adjustwidth}
+\newpage\pagestyle{empty}
+\begin{center}
+\vspace{2cm}
+{\zihao{4}\bf Dissertation Submitted to Wuhan University of Technology for \\
+the \wutEnglishdegree's Degree in \wutEnglishtype}
+\vspace{4cm}
+\begin{spacing}{2}
+{\zihao{3}\bf \wutEnglishtitlefirstline{} \wutEnglishtitlesecondline}
+\end{spacing}
+\end{center}
+\vspace{4cm}
+\begin{spacing}{1.5}
+\zihao{4}\bf
+\noindent\hspace{4cm} \wutdegreeabbreviation{} Candidate：\wutauthorEnglishname \\
+\mbox{}\hspace{4cm} Supervisor：Prof. \wutsupervisorEnglishname \\
+\mbox{}\hspace{4cm} Major：\wutmajorEnglishname
+\end{spacing}
+\vspace{4.0cm}
+\begin{center}
+\zihao{5}\bf
+Wuhan University of Technology \\
+Wuhan 430070, Hubei, P. R. China \\
+\wutdateEnglish
+\end{center}
+\end{titlepage}}
+
+
+
+
+\newcommand{\WUTmakesecondcover}{
+﻿\begin{titlepage}
+\begin{center}
+\begin{minipage}[t][20mm][t]{60mm}
+{\kaishu\zihao{4} 分类号} \CJKunderline{\makebox[30mm]{\wutclassificationnumber}} \\
+UDC \CJKunderline{\makebox[36mm]{\wutUDC}}
+\end{minipage}
+\hfill
+\begin{minipage}[t][20mm][t]{60mm}
+{\kaishu\zihao{4} 密\hspace{9mm}级} \CJKunderline{\makebox[30mm]{\wutconfidentiality}} \\
+{\kaishu\zihao{4} 学校代码} \CJKunderline{\makebox[30mm]{\wutuniversitycode}} 
+\end{minipage} \\
+\vspace{20mm}
+\begin{center}
+\resizebox{0.6\hsize}{!}{\includegraphics{WUT.jpg}} \\
+\vspace{5mm}
+{\zihao{1}\STZhongsong \makebox[60mm][s]{学位论文}}
+\end{center}
+\vspace{30mm}
+\begin{spacing}{1.5}
+\zihao{4}\STZhongsong
+\noindent 题目 \CJKunderline{\makebox[136mm]{\kaishu\wutChinesetitle}} \\
+\noindent\begin{minipage}[c][20mm][c]{10mm}
+\vspace{5mm}
+\begin{spacing}{1.0}
+\zihao{4}
+英文 \\
+题目
+\end{spacing}
+\end{minipage}
+\begin{minipage}[c][20mm][c]{136mm}
+\vspace{5mm}
+\begin{spacing}{1.0}
+\makebox[136mm]{\wutEnglishtitlefirstline} \\
+\CJKunderline{\makebox[136mm]{\wutEnglishtitlesecondline}}
+\end{spacing}
+\end{minipage} \\
+\noindent 研究生姓名 \CJKunderline{\makebox[121mm]{\kaishu\wutauthorChinesename}} \\
+\noindent\begin{minipage}[c][19mm][c]{25mm}
+指导教师
+\end{minipage}
+\begin{minipage}[c][19mm][c]{121mm}
+姓名 \CJKunderline{\makebox[45mm]{\kaishu\wutsupervisorChinesename}} 职称 \CJKunderline{\makebox[20mm]{\kaishu\wutsupervisortitle}} 学位 \CJKunderline{\makebox[20mm]{\kaishu\wutsupervisordegree}} \\
+单位名称 \CJKunderline{\makebox[68mm]{\kaishu\wutsupervisororganization}} 邮编 \CJKunderline{\makebox[20mm]{\kaishu\wutsupervisorzipcode}}
+\end{minipage} \\
+\ifthenelse{\equal{\wutvicesupervisorswitch}{on}}{
+\vspace{-2mm}\begin{minipage}[c][19mm][c]{25mm}
+副指导教师
+\end{minipage}
+\begin{minipage}[c][19mm][c]{121mm}
+姓名 \CJKunderline{\makebox[45mm]{\kaishu\wutvicesupervisorname}} 职称 \CJKunderline{\makebox[20mm]{\kaishu\wutvicesupervisortitle}} 学位 \CJKunderline{\makebox[20mm]{\kaishu\wutvicesupervisordegree}} \\
+单位名称 \CJKunderline{\makebox[68mm]{\kaishu\wutvicesupervisororganization}} 邮编 \CJKunderline{\makebox[20mm]{\kaishu\wutvicesupervisorzipcode}}
+\end{minipage} \\}{}
+\noindent 申请学位级别 \CJKunderline{\makebox[42mm]{\kaishu \wutChinesedegree}} 学科专业名称 \CJKunderline{\makebox[42mm]{\kaishu\wutmajorChinesename}} \\
+\noindent 论文提交日期 \CJKunderline{\makebox[42mm]{\kaishu\wutdateofthesissubmission}} 论文答辩日期 \CJKunderline{\makebox[42mm]{\kaishu\wutdateofthesisdefense}} \\
+\noindent 学位授予单位 \CJKunderline{\makebox[42mm]{\kaishu\wutdegreeorganization}} 学位授予日期 \CJKunderline{\makebox[42mm]{\kaishu\wutdateofdegreeaward}} \\
+\noindent 答辩委员会主席 \CJKunderline{\makebox[42mm]{\kaishu\wutcommitteechairman}} 评阅人
+\begin{minipage}[t][20mm][t]{52mm}
+\CJKunderline{\makebox[52mm]{\kaishu\wutfirstreviewer}} \\
+\CJKunderline{\makebox[52mm]{\kaishu\wutsecondreviewer}}
+\end{minipage}
+\end{spacing}
+{\hspace{50mm}\zihao{4}\STZhongsong\wutdateofthesiscompletion}
+\end{center}
+\end{titlepage}}
+
+
+
+
+
+
+

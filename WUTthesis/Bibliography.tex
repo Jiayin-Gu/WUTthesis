@@ -1,0 +1,43 @@
+\section{参考文献}
+
+
+
+\subsection{文献数据库文件}
+\par 参考文献的信息都记录在\texttt{Bibliograph.bib}文件当中，\texttt{Thesis.tex}中的相应代码为
+\begin{lstlisting}[language=TeX]
+\addbibresource{Bibliography.bib}
+\end{lstlisting}
+文献数据库中主要分为期刊文献（\verb"@article{}"）和书籍（\verb"@book{}"），比如如下文献信息：
+\begin{lstlisting}
+@article{Feynman_RevModPhys_1948, author={R. P. Feynman}, title={Space-time Approach to Non-relativistic Quantum Mechanics}, journal={Reviews of Modern Physics}, year={1948}, volume={20}, pages={367--387}}
+
+@book{Hu_2013, author={胡伟}, title={{\LaTeXe} 完全学习手册}, edition={第二版}, publisher={清华大学出版社}, address={北京}, year={2013}}
+
+@book{Knuth_1986, author={Donald E. Knuth}, title={Computers \& Typesetting, Volume A: The TeXbook}, publisher={Addison-Wesley}, year={1986}}
+
+@book{Mittelbach_2004, author={Frank Mittelbach and Michel Goossens and Johannes Braams and David Carlisle and Chris Rowley}, title={The {\LaTeX} Companion (Tools and Techniques for Computer Typesetting)}, edition={Second}, publisher={Addison-Wesley}, year={2004}}
+\end{lstlisting}
+文献信息条目最好按照字母顺序排列。其中的\texttt{Hu\_2013}，\texttt{Feynman\_RevModPhys\_1948}等是引用是所用的“健”。这里的建议是，对于书籍，采用作者名加年份的方式命名，对于期刊文献，采用作者名加期刊名加年份的方式命名，其中期刊名由ISO 4缩写得来，例如\texttt{RevModPhys}代表缩写\texttt{Rev. Mod. Phys.}，完整的期刊名是\textit{Reviews of Modern Physics}。说到这里，如果用户对量子力学的路经积分表述感兴趣，可参考文献\cite{Feynman_RevModPhys_1948}。
+
+
+
+\subsection{\texttt{biblatex}宏包和\texttt{gb7714-2015}样式}
+\par \texttt{Thesis.tex}中导言区加载的\texttt{biblatex}负责参考文献处理的宏包，宏包导入代码如下：
+\begin{lstlisting}[language=TeX]
+\usepackage[backend=biber, maxbibnames=3, minbibnames=3, style=gb7714-2015, gbpub=false, gbnamefmt=lowercase]{biblatex}
+\end{lstlisting}
+其中的参数说明如下
+\begin{itemize}
+\item \texttt{biber}，后端的引擎程序；
+\item \texttt{maxbibnames=3}，the maximum number of authors displayed in bibliography；
+\item \texttt{minbibnames=3}，the minimum number of authors displayed in bibliography；
+\item \texttt{style=gb7714-2015}，采用\texttt{gb7714-2015}样式，该样式由宏包 \\ \texttt{biblatex-gb7714-2015}提供，是胡振震根据《GB/T 7714-2015 信息与文献参考文献著录规则》的要求开发而成；
+\item \texttt{gbpub=false}；宏包\texttt{biblatex-gb7714-2015}提供的参数，意思是当文献出版信息缺失时，不惨用[出版地不详]、[出版者不详]等填补缺省信息，而使用标准样式的方式取消相应项的输出；
+\item \texttt{gbnamefmt=lowercase}，宏包\texttt{biblatex-gb7714-2015}提供的参数，意思是参考文献的作者姓名的大小写由输入信息确定不做改变。
+\end{itemize}
+
+
+
+关于\texttt{biblatex}宏包和\texttt{biblatex-gb7714-2015}宏包的详细说明，可以从 \href{https://ctan.org/?lang=en}{CTAN} 网站上下载相应的说明文档
+
+

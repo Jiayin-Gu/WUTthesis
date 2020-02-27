@@ -1,0 +1,14 @@
+\section{编译方式}
+
+\par {\LaTeX}的编译方式有多种，其中具体的区别可参考相关资料，这里推荐使用\texttt{xelatex}，该编译方式可以直接处理UTF8编码的字符。因为需要基于\texttt{biblatex}生成参考文献，完整的编译分为如下四步：
+\begin{itemize}
+\item \texttt{xelatex Thesis.tex}
+\item \texttt{biber Thesis}
+\item \texttt{xelatex Thesis.tex}
+\item \texttt{xelatex Thesis.tex}
+\end{itemize}
+不过在具体的论文撰写过程中，当暂时不关心参考文献的生成时，可以仅用\texttt{xelatex Thesis.tex}编译文档来查看排版效果。{\color{red} 有时编译后发现论文中的公式或图表的链接部分显示“??”，这时只需要再编译一次即可。编译时，可能由于字体大小替换而出现一些警告，这个时候可以忽略，不影响最终编译。}
+
+
+
+

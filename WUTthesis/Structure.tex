@@ -1,0 +1,48 @@
+\section{模板结构}
+
+
+\par \texttt{WUTthesis}的文件夹中包含以下文件及子文件夹
+\begin{itemize}
+\item \texttt{Thesis.tex}，论文的主源文件；
+\item \texttt{WUTthesis.sty}，自定义的论文模板宏包；
+\item \texttt{Cover.tex}，包含封面信息及封面生成命令的源文件；
+\item \texttt{Dedications.tex}, 包含“{\kaishu 献给某某某}”字段的源文件；
+\item \texttt{Declaration.tex}，包含独创性声明和学位论文使用授权书的源文件；
+\item \texttt{Abstract.tex}，包含中英文摘要的源文件；
+\item \texttt{Introduction}等，章文件夹，多个，每一个文件夹对应一章，一章中所涉及的一切子源文件以及插图都包含在相应文件夹中；
+\item \texttt{Appendices}，附录文件夹，所有的附录源文件都包含在该文件夹中；
+\item \texttt{Bibliography.bib}，文献数据库文件；
+\item \texttt{Achievements.tex}，包含作者简历和科研成果的源文件；
+\item \texttt{Acknowledgements.tex}，包含致谢的源文件；
+\item \texttt{STZhongsong.ttf}，华文中宋字体文件；
+\item \texttt{WUT.jpg}，图片形式的“武汉理工大学”。
+\end{itemize}
+其中，\texttt{Dedications.tex}可有可无，不需要时，只需要将\texttt{Thesis.tex}文件中的对应导入文件的代码删除或注释。另外，该页也以可用其他软件设计生成，随后将生成的\texttt{Dedications.pdf}文档插入即可，对应的操作是将\texttt{Thesis.tex}中的对应代码替换为
+\begin{lstlisting}[language=TeX]
+\clearpage{\pagestyle{empty}\cleardoublepage} %% 其作用是，如果此页为偶数页，则设为完全空白页，进入下一页
+\includepdf{Dedications.pdf} %% 导入Dedications.pdf文档
+\end{lstlisting}
+即可。关于{\STZhongsong 独创性声明}和{\STZhongsong 学位论文使用授权书}部分，可以打印、签名、扫描后将成生的\texttt{Declaration.pdf}文档插入；对应的操作是将\texttt{Thesis.tex}中的对应导入文件的代码替换为
+\begin{lstlisting}[language=TeX]
+\clearpage{\pagestyle{empty}\cleardoublepage}
+\includepdf{Declaration.pdf}
+\end{lstlisting}
+即可。每一章的层次结构分为章（chapter）、节（section）、小节（subsection），这里建议每一节的所有内容都写进一个源文件中，然后使用导入命令 \verb"\input{}" 将各个源文件以类似递归的方式链接成一个整体（\texttt{Thesis.tex}中导入对应各章的\texttt{Chapter.tex}，各章的\texttt{Chapter.tex}中在导入对应的各节的源文件）。每一章所涉及的所有内容（每一节对应的源文件、图）都存放到一个文件夹，这样做的目的也是为了使整个\texttt{WUTthesis}的结构更加突出，便于用户理解。然而，这样做就面临一个问题，当导入对应节（section）的源文件或图是，都必须提供精准的路径，而当对应每一章的文件夹重命名后，相应章的所有路径都必须改变，这因此会造成一些麻烦。解决的办法是在\texttt{Thesis.tex}中导入每一章源文件前定义一个指代路径的宏 \verb"\path"，例如：
+\begin{lstlisting}[language=TeX]
+\def\path{Introduction}\input{\path/Chapter.tex}
+\end{lstlisting}
+之后每当我们导入源文件或图时，提供 \verb"\path" 作为路径即可，重命名每一章文件夹时，只要更改对应路径的宏定义就行。通过一些设置，编译生成pdf文档中每一章的开启都位于奇数页，且开启页隐藏页眉也页码，相应的，结束页的页码为偶数，如果此时恰好结束页空白，则该页将隐藏页眉和页码。关于页码，从摘要到第一章开始前，使用罗马数字，而从第一章开始，重新编号，使用阿拉伯数字。在\texttt{Thesis.tex}中关于目录的代码如下：
+\begin{lstlisting}[language=TeX]
+\begin{spacing}{1.3}
+\tableofcontents
+\end{spacing}
+\end{lstlisting}
+这里的\texttt{spacing}环境由\texttt{setspace}宏包提供，其参数用于控制行距（在参数$1.3$的情况下，使用\texttt{spacing}环境和不使用\texttt{spacing}环境，排版效果是一样的）。用户可以根据实际情况，适当调整目录的行距，使得目录尽量控制在两页之内。这里需要说明一下，由于汉字都是方块字，这和英文具有大小写的情况不同，所以使用{\CTeX}宏集提供的\texttt{ctexbook}文类时，行距会自动调整为英文情形下的$1.3$倍。\texttt{Thesis.tex}中对于文献打印部分的代码
+\begin{lstlisting}[language=TeX]
+\begin{spacing}{1.3}
+\printbibliography[heading=bibintoc, title={参考文献}]
+\end{spacing}
+\end{lstlisting}
+是同样的道理，用户可以根据实际情况，调整参考文献的行距。{\color{red}关于书脊部分信息，可以在打印论文封面时让打印店老板操作一下，一般情况下他们都会知道怎么做。}
+
+

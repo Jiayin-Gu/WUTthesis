@@ -1,0 +1,112 @@
+\section{{\CTeX}宏集}
+
+
+\par {\CTeX}宏集是面向中文排版的通用{\LaTeX}排版框架，为中文{\LaTeX}文档提供了汉字输出支持、标点压缩、字体字号命令、标题文字汉化、中文版式调整、数字日期转换等支持功能，可适应论文、报告、幻灯片等不同类型的中文文档。\texttt{WUTthesis}正式基于{\CTeX}宏集提供的\texttt{ctexbook}文类制作而成，因此，关于{\CTeX}宏集的一切命令都可以\texttt{WUTthesis}。\texttt{ctexbook}文类的使用如下：
+\begin{lstlisting}[language=TeX]
+\documentclass[a4paper, UTF8, zihao=-4]{ctexbook}
+\end{lstlisting}
+其中的参数分别制定A4纸、源文件为UTF8编码方式，正文默认字号小四。{\color{red}这里需要特别强调的是，整个论文的源文件中的所有字符必须是用UTF8编码，这个非常重要！！}
+
+
+\begin{color}{red}
+\par 一般情况下，{\CTeX}宏集可以自动在一段文字中的中英文之间插如一段空白，以兼容中英文的排版风格。但是在有些情况下，当一段文字中的英文包含在某些命令中时，{\CTeX}宏集就无法做到自动插入空白，这时就有必要人工的方式在源文件中插入空白，例如:
+\begin{lstlisting}
+可从 \href{https://ctan.org/?lang=en}{CTAN} 下载
+\end{lstlisting}
+上述这段文字中的命令为“CTAN”引入网页链接。这些命令除了 \verb"\href{}{}" （引入网页链接），还包括 \verb"\verb""" （抄录）、\verb"\ref{}" （图、表、公式的引用）等。
+\end{color}
+
+{\color{red}\par 另外，还需要指出的是，有可能由于中文字库不完备的原因，而使得在最终生成的pdf文档中无法显示一些生辟字。（针对这一潜在的问题，还需要进一步的解决方案！）}
+
+
+\par {\CTeX}的详细介绍，请参考其宏包的说明文档，可从 \href{https://ctan.org/?lang=en}{CTAN} 下载（{\color{red} 强烈推荐阅读}）。
+
+
+
+\subsection{中文字体}
+
+
+\par {\CTeX}宏集提供了如下几种常见的中文字体及其相应的声明形式的生成命令\footnote{针对不同操作系统所包含的不同的字库，{\CTeX}套件还可能提供了一些其他字体，比如隶书、幼圆，具体可参见{\CTeX}宏集手册。}：
+\begin{itemize}
+\item {\songti 宋体}，\verb"\songti"；
+\item {\heiti 黑体}，\verb"\heiti"；
+\item {\fangsong 仿宋}，\verb"\fangsong"；
+\item {\kaishu 楷书}，\verb"\kaishu"。
+\end{itemize}
+对于大段落中文文本字体的修改，我们还可以使用字体名作为环境名的环境作用形式，例如
+\begin{lstlisting}[language=TeX]
+\begin{heiti}
+黑体文本
+\end{heiti}
+\end{lstlisting}
+本文中，宋体是常规默认字体，而黑体则用作各级标题的默认字体。除了以上列出的四种常用字体，\texttt{WUTthesis.sty}还定义了华文中宋字体，其命令为 \verb"\STZhongsong"（{\heiti 这里没有定义环境形式}）。其定义是通过\texttt{xeCJK}\footnote{当使用{\CTeX}宏集时，\texttt{xeCJK}宏包会自动加载，所以无需另外加载。}宏包提供的相关命令从文件夹中所包含的华文中宋字体文件\texttt{STZhongsong.ttf}中直接提字。{\STZhongsong 独创性声明}和{\STZhongsong 学位论文使用授权书}部分就使用的华文中宋。宋体和{\heiti 黑体}还可以通过 \verb"\textbf{}"命令（参数形式）或其等价 \verb"\bfseries" 命令（声明形式）获得\textbf{加粗宋体}和\textbf{\heiti 加粗黑体}。
+
+
+
+
+
+
+
+
+
+\subsection{字体尺寸（字号）}
+
+\par 字体大小（字号）的设置通过{\CTeX}宏集提供的命令 \verb"\zihao{<代码>}"，各字号对应的 \verb"<代码>" 及相应大小\footnote{这里的字体大小采用的是pt (point) 作为单位，$1 {\rm pt}\approx 0.35 {\rm mm}$。}可参见表~\ref{tab_zihao}。另外，对于大段文字也可采用环境形式，例如
+\begin{lstlisting}[language=TeX]
+\begin{zihao}{0}
+武汉理工大学
+\end{zihao}
+\end{lstlisting}
+将“武汉理工大学”设置成初号字体。因为\texttt{WUTthesis}使用了{\CTeX}宏集提供的\texttt{ctexbook}文类，{\LaTeX}的标准字体尺寸命令被重新定义，使得这些命令与中文字号有所对应，具体的对应方式见表~\ref{tab_standard_fontsize}。
+
+
+\begin{table}
+\caption{中文字号及相应的代码和大小。}
+\begin{center}
+\begin{tabular}{>{\centering\arraybackslash}m{2.0cm}|>{\centering\arraybackslash}m{2.0cm}|>{\centering\arraybackslash}m{2.0cm}||>{\centering\arraybackslash}m{2.0cm}|>{\centering\arraybackslash}m{2.0cm}|>{\centering\arraybackslash}m{2.0cm}}
+\hline
+\hline
+字号 & 代码 & 大小 & 字号 & 代码 & 大小 \bigstrut \\ \hline
+初号 & 0 & 42.15749pt & 小初 & -0 & 36.135pt \bigstrut \\ \hline
+一号 & 1 & 26.09749pt & 小一 & -1 & 24.09pt \bigstrut \\ \hline
+二号 & 2 & 22.08249pt & 小二 & -2 & 18.06749pt \bigstrut \\ \hline
+三号 & 3 & 16.06pt & 小三 & -3 & 15.05624pt \bigstrut \\ \hline
+四号 & 4 & 14.05249pt & 小四 & -4 & 12.045pt \bigstrut \\ \hline
+五号 & 5 & 10.53937pt & 小五 & -5 & 9.03374pt \bigstrut \\ \hline
+六号 & 6 & 7.52812pt & 小六 & -6 & 6.52437pt \bigstrut \\ \hline
+七号 & 7 & 5.52061pt & 八号 & 8 & 5.01874pt \bigstrut \\ \hline
+\hline
+\end{tabular}
+\end{center}
+\label{tab_zihao}
+\end{table}
+
+
+
+
+
+\begin{table}
+\caption{标准字体尺寸命令与中文字号在\texttt{ctexbook}文类选项为\texttt{zihao=-4}和\texttt{zihao=5}两种情况下的对应方式。}
+\begin{center}
+\begin{tabular}{>{\centering\arraybackslash}m{4.0cm}||>{\centering\arraybackslash}m{3.0cm}|>{\centering\arraybackslash}m{3.0cm}}
+\hline
+\hline
+standard fontsize & \texttt{zihao=5} & \texttt{zihao=-4} \bigstrut \\ \hline
+\verb"\tiny" & 七号 & 小六 \bigstrut \\ \hline
+\verb"\scriptsize" & 小六 & 六号 \bigstrut \\ \hline
+\verb"\footnotesize" & 六号 & 小五 \bigstrut \\ \hline
+\verb"\small" & 小五 & 五号 \bigstrut \\ \hline
+\verb"\normalsize" & 五号 & 小四 \bigstrut \\ \hline
+\verb"\large" & 小四 & 小三 \bigstrut \\ \hline
+\verb"\Large" & 小三 & 小二 \bigstrut \\ \hline
+\verb"\LARGE" & 小二 & 二号 \bigstrut \\ \hline
+\verb"\huge" & 二号 & 小一 \bigstrut \\ \hline
+\verb"\Huge" & 一号 & 一号 \bigstrut \\ \hline
+\hline
+\end{tabular}
+\end{center}
+\label{tab_standard_fontsize}
+\end{table}
+
+
+

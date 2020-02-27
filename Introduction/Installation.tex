@@ -1,0 +1,26 @@
+\section{{\LaTeX}安装}
+
+\par 下面列出一些{\LaTeX}套装以及相应的适用操作系统和官方网站
+\begin{itemize}
+\item MiKTeX (Microsoft Windows, \url{https://miktex.org/})；
+\item MacTeX (macOS, \url{https://www.tug.org/mactex/})；
+\item CTeX (Microsoft Windows, Chinese TeX, \url{http://www.ctex.org/HomePage})\footnote{这里需要区分CTeX套装和{\CTeX}宏集。}；
+\item TeX Live (Unix-like/Microsoft Windows/macOS, \url{http://tug.org/texlive/})。
+\end{itemize}
+如果在Ububtu（Linux的一种发行版）操作系统下，可以直接通过命令\texttt{sudo apt-get install texlive-full}安装。因为TeX Live具有最广泛的操作系统适用性，所以也自然成为最为推荐的{\LaTeX}套装，其相应的编辑器为 \href{http://www.tug.org/texworks/}{TeXworks}（Linux系统下需要单独安装并通过配置指定已安装的Tex Live可执行文件路径。）\footnote{TeXworks是一种开源的、跨平台、多语言支持的TeX/LaTeX编辑器。其他类似的编辑器包括 \href{https://www.texstudio.org/}{TeXstudio}、\href{https://www.xm1math.net/texmaker/}{Texmaker} 等。}。另外，需要指出的是，CTeX套装虽然针对中排版的{\LaTeX}系统，由于以下两个原因：
+\begin{itemize}
+\item 截止到2020年2月的最新版本，CTeX套装中并没有包含\texttt{biblatex-gb7714-2015}宏包（该宏包用于设置中文参考文献样式）；
+\item 其配套的WinEdt\footnote{\href{http://www.winedt.com/}{WinEdt} 是闭源软件，只适用与Microsoft Windows平台，不过用户可以免费使用该软件。}编辑器中并没有发现对应于\texttt{biblatex}宏包的参考文献处理程序\texttt{biber}按钮；
+\end{itemize}
+不建议使用。而实际上，由于上述原因，\texttt{WUTthesis}也未在CTeX套装上测试成功。不过新版CTeX套装预计会在2020年4月之前发布，变动会很大，我们拭目以待。当然，这里也鼓励喜欢钻研{\LaTeX}技术用户尝试解决上述两个原因造成的在使用\texttt{WUTthesis}过程出现的问题。
+
+
+
+
+
+
+
+
+
+
+
