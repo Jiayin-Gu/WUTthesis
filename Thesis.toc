@@ -60,6 +60,8 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {B.3}数学符号}{23}{section.B.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{作者简历及攻读学位期间发表的学术论文与研究成果}{29}{appendix*.4}% 
+\contentsline {chapter}{参考文献}{29}{appendix*.4}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{致谢}{31}{appendix*.5}% 
+\contentsline {chapter}{作者简历及攻读学位期间发表的学术论文与研究成果}{31}{appendix*.5}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{致谢}{33}{appendix*.6}% 

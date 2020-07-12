@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2019.5.10)  12 JUL 2020 03:41
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2019.5.10)  12 JUL 2020 03:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1663,12 +1663,13 @@ Package biblatex Info: Automatic encoding selection.
 \openout3 = `Thesis.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'Thesis.bbl' not found.
-No file Thesis.bbl.
+Package biblatex Info: ... file 'Thesis.bbl' found.
+(./Thesis.bbl)
 Package biblatex Info: Reference section=0 on input line 65.
 Package biblatex Info: Reference segment=0 on input line 65.
 \AtBeginShipoutBox=\box91
 Package hyperref Info: Link coloring ON on input line 65.
+
 (/usr/local/texlive/2019/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
@@ -1954,19 +1955,6 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <9.03374> on input line 9.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 9.
-
-
-LaTeX Warning: Citation 'Hu_2013' on page 1 undefined on input line 9.
-
-
-LaTeX Warning: Citation 'Liu_2013' on page 1 undefined on input line 9.
-
-
-LaTeX Warning: Citation 'Knuth_1986' on page 1 undefined on input line 9.
-
-
-LaTeX Warning: Citation 'Mittelbach_2004' on page 1 undefined on input line 9.
-
 File: Introduction/Knuth.jpg Graphic file (type bmp)
 <Introduction/Knuth.jpg>
 ) (./Introduction/WUTthesis.tex [1
@@ -2036,13 +2024,9 @@ T1/lmtt/m/n/12.045 WUTthesis \TU/FandolSong-Regular(1)/m/n/12.045 使 用 了 \T
 
 ) (./WUTthesis/WUTthesis_package.tex [8] [9] [10])
 (./WUTthesis/Bibliography.tex [11]
-
-LaTeX Warning: Citation 'Feynman_RevModPhys_1948' on page 12 undefined on input
- line 20.
-
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <14.05249> not available
 (Font)              Font shape `T1/lmtt/b/n' tried instead on input line 24.
-[12]) (./WUTthesis/Font.tex
+ [12]) (./WUTthesis/Font.tex
 
 Package fontspec Warning: Font "FandolHei-Regular" does not contain requested
 (fontspec)                Script "CJK".
@@ -2234,27 +2218,34 @@ LaTeX Font Info:    Try loading font information for T1+qcr on input line 35.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/tex-gyre/t1qcr.fd
 File: t1qcr.fd 2009/09/25 v1.2 font definition file for T1/qcr
-)))
+))) [23]
+[24] [25] [26] [27] [28
 
-LaTeX Warning: Empty bibliography on input line 95.
+]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 95.
+ [29] [30
 
-[23] [24] [25] [26] [27] [28
+] (./Achievements.tex) (./Acknowledgements.tex [31
 
-] (./Achievements.tex) (./Acknowledgements.tex
-[29
-
-] [30
+] [32
 
 ])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 106.
- [31]
+ [33]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 106.
  (./Thesis.aux)
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 106.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 106.
-Package rerunfilecheck Info: File `Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 81E91BFD08AA852708779055124866B4.
 
+
+Package rerunfilecheck Warning: File `Thesis.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Thesis.out':
+(rerunfilecheck)             Before: 81E91BFD08AA852708779055124866B4
+(rerunfilecheck)             After:  C53BBCA4D5DFD9AA93D3CCC8E4BEB817.
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.34248pt have occurred.
@@ -2263,21 +2254,19 @@ LaTeX Font Warning: Size substitutions with differences
 LaTeX Warning: There were undefined references.
 
 
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                Thesis
-(biblatex)                and rerun LaTeX afterwards.
+Package biblatex Warning: Please rerun LaTeX.
 
 Package logreq Info: Writing requests to 'Thesis.run.xml'.
 \openout1 = `Thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 39289 strings out of 492922
- 791296 string characters out of 6133407
- 1324659 words of memory out of 5000000
- 42595 multiletter control sequences out of 15000+600000
- 734307 words of font info for 319 fonts, out of 8000000 for 9000
+ 39353 strings out of 492922
+ 792836 string characters out of 6133407
+ 1325659 words of memory out of 5000000
+ 42649 multiletter control sequences out of 15000+600000
+ 747184 words of font info for 334 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 63i,15n,124p,1125b,2010s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 63i,15n,124p,1125b,4705s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Thesis.pdf (45 pages).
+Output written on Thesis.pdf (47 pages).

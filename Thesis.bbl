@@ -1,0 +1,215 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.0 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{Hu_2013}{book}{}
+      \name{author}{1}{}{%
+        {{hash=fca9a855260a279113b5ae0e79b5664c}{%
+           family={胡伟},
+           familyi={胡\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {chinese}%
+      }
+      \list{location}{1}{%
+        {北京}%
+      }
+      \list{publisher}{1}{%
+        {清华大学出版社}%
+      }
+      \strng{namehash}{fca9a855260a279113b5ae0e79b5664c}
+      \strng{fullhash}{fca9a855260a279113b5ae0e79b5664c}
+      \strng{bibnamehash}{fca9a855260a279113b5ae0e79b5664c}
+      \strng{authorbibnamehash}{fca9a855260a279113b5ae0e79b5664c}
+      \strng{authornamehash}{fca9a855260a279113b5ae0e79b5664c}
+      \strng{authorfullhash}{fca9a855260a279113b5ae0e79b5664c}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{第二版}
+      \field{langid}{english}
+      \field{title}{{\LaTeXe} 完全学习手册}
+      \field{usera}{M}
+      \field{userd}{chinese}
+      \field{userf}{chinese}
+      \field{year}{2013}
+      \field{dateera}{ce}
+      \keyw{Hu_2013}
+    \endentry
+    \entry{Liu_2013}{book}{}
+      \name{author}{1}{}{%
+        {{hash=a614dd2ab592283bdd97d70ffb8c2f3a}{%
+           family={刘海洋},
+           familyi={刘\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {chinese}%
+      }
+      \list{location}{1}{%
+        {北京}%
+      }
+      \list{publisher}{1}{%
+        {电子工业出版社}%
+      }
+      \strng{namehash}{a614dd2ab592283bdd97d70ffb8c2f3a}
+      \strng{fullhash}{a614dd2ab592283bdd97d70ffb8c2f3a}
+      \strng{bibnamehash}{a614dd2ab592283bdd97d70ffb8c2f3a}
+      \strng{authorbibnamehash}{a614dd2ab592283bdd97d70ffb8c2f3a}
+      \strng{authornamehash}{a614dd2ab592283bdd97d70ffb8c2f3a}
+      \strng{authorfullhash}{a614dd2ab592283bdd97d70ffb8c2f3a}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{title}{LaTeX 入门}
+      \field{usera}{M}
+      \field{userd}{chinese}
+      \field{userf}{chinese}
+      \field{year}{2013}
+      \field{dateera}{ce}
+      \keyw{Liu_2013}
+    \endentry
+    \entry{Knuth_1986}{book}{}
+      \name{author}{1}{}{%
+        {{hash=ec08e6f01da5f3814f28a70c89c64656}{%
+           family={Knuth},
+           familyi={K\bibinitperiod},
+           given={Donald\bibnamedelima E.},
+           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{publisher}{1}{%
+        {Addison-Wesley}%
+      }
+      \strng{namehash}{ec08e6f01da5f3814f28a70c89c64656}
+      \strng{fullhash}{ec08e6f01da5f3814f28a70c89c64656}
+      \strng{bibnamehash}{ec08e6f01da5f3814f28a70c89c64656}
+      \strng{authorbibnamehash}{ec08e6f01da5f3814f28a70c89c64656}
+      \strng{authornamehash}{ec08e6f01da5f3814f28a70c89c64656}
+      \strng{authorfullhash}{ec08e6f01da5f3814f28a70c89c64656}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{title}{Computers \& Typesetting, Volume A: The TeXbook}
+      \field{usera}{M}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{year}{1986}
+      \field{dateera}{ce}
+      \keyw{Knuth_1986}
+    \endentry
+    \entry{Mittelbach_2004}{book}{}
+      \name{author}{5}{}{%
+        {{hash=9355edd511e3f6fdd880ee98722a53fb}{%
+           family={Mittelbach},
+           familyi={M\bibinitperiod},
+           given={Frank},
+           giveni={F\bibinitperiod}}}%
+        {{hash=0743efb276e9219ee664a9b3dbd60619}{%
+           family={Goossens},
+           familyi={G\bibinitperiod},
+           given={Michel},
+           giveni={M\bibinitperiod}}}%
+        {{hash=d52f183a29af96d48695b8bea23e66e1}{%
+           family={Braams},
+           familyi={B\bibinitperiod},
+           given={Johannes},
+           giveni={J\bibinitperiod}}}%
+        {{hash=3094f4812cc660f7320fd1ab3d3da906}{%
+           family={Carlisle},
+           familyi={C\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=0907be26d21af9e9c3820d51f421fe33}{%
+           family={Rowley},
+           familyi={R\bibinitperiod},
+           given={Chris},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{publisher}{1}{%
+        {Addison-Wesley}%
+      }
+      \strng{namehash}{f6d3f5d3a9cc39507a7ff2f9963883dc}
+      \strng{fullhash}{81b7ecc7e76086895ab856756307e8bc}
+      \strng{bibnamehash}{d068a4a19e32ac6a68e851d4c89b7dd1}
+      \strng{authorbibnamehash}{d068a4a19e32ac6a68e851d4c89b7dd1}
+      \strng{authornamehash}{f6d3f5d3a9cc39507a7ff2f9963883dc}
+      \strng{authorfullhash}{81b7ecc7e76086895ab856756307e8bc}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{Second}
+      \field{langid}{english}
+      \field{title}{The {\LaTeX} Companion (Tools and Techniques for Computer Typesetting)}
+      \field{usera}{M}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{year}{2004}
+      \field{dateera}{ce}
+      \keyw{Mittelbach_2004}
+    \endentry
+    \entry{Feynman_RevModPhys_1948}{article}{}
+      \name{author}{1}{}{%
+        {{hash=bc0435d3e01ddd86761bcf1fc818ecf1}{%
+           family={Feynman},
+           familyi={F\bibinitperiod},
+           given={R.\bibnamedelimi P.},
+           giveni={R\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \strng{namehash}{bc0435d3e01ddd86761bcf1fc818ecf1}
+      \strng{fullhash}{bc0435d3e01ddd86761bcf1fc818ecf1}
+      \strng{bibnamehash}{bc0435d3e01ddd86761bcf1fc818ecf1}
+      \strng{authorbibnamehash}{bc0435d3e01ddd86761bcf1fc818ecf1}
+      \strng{authornamehash}{bc0435d3e01ddd86761bcf1fc818ecf1}
+      \strng{authorfullhash}{bc0435d3e01ddd86761bcf1fc818ecf1}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Reviews of Modern Physics}
+      \field{langid}{english}
+      \field{title}{Space-time Approach to Non-relativistic Quantum Mechanics}
+      \field{usera}{J}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{volume}{20}
+      \field{year}{1948}
+      \field{dateera}{ce}
+      \field{pages}{367\bibrangedash 387}
+      \range{pages}{21}
+      \keyw{Feynman_RevModPhys_1948}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
