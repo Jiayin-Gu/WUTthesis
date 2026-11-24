@@ -12,7 +12,7 @@
 
 
 \subsection{英文字体（西欧文字）}
-\par 英文字体分为三类，分别是罗马体字族（\textrm{Roman Family}）、等宽体字族（\textsf{San Serif Family}）、等线体字族（\texttt{Typewriter Family}）\footnote{有些书籍或相关资料中也将这三类字体称为衬线字族 (Serif)、非衬线字族 (Sans Serif)、等宽字群 (Monospace)。}。本文所使用的对应的三类字族具体为Latin Modern Roman，\textsf{Latin Modern Sans Serif}和\texttt{Latin Modern Sans Typerwriter}\footnote{Latin Modern系列字体是Computer Modern系列字体的加强版本，后者是早期Donald E. Knuth在开发{\TeX}排版系统时所开发的系列字体。}，其中Latin Modern Roman为常规默认的英文字体。表 \ref{tab_font_style} 中列出了一些字体设置命令以及相应的样式。一些字体设置命令的声明形式有它们对应的简化形式，分别是：\verb"\rm" 等价于 \verb"\rmfamily"，\verb"\sf" 等价于 \verb"\sffamily"，\verb"\tt" 等价于 \verb"\ttfamily"，\verb"\bf" 等价于 \verb"\bfseries"，\verb"\it" 等价于 \verb"\itshape"，\verb"\sc" 等价于 \verb"\scshape"，\verb"\sl" 等价于 \verb"\slshape"。这些等价形式的命令在有些复合字体设置情况下和原有形式其实并不能做到完全意义上的等价，所以使用须谨慎。和中文字体设置一样，一些英文字体设置命令可以作为环境名，组成字体设置环境，例如加粗环境
+\par 英文字体分为三类，分别是罗马体字族（\textrm{Roman Family}）、等线体字族（\textsf{San Serif Family}）、等宽体字族（\texttt{Typewriter Family}）\footnote{有些书籍或相关资料中也将这三类字体称为衬线字族 (Serif)、非衬线字族 (Sans Serif)、等宽字群 (Monospace)。}。本文所使用的对应的三类字族具体为Latin Modern Roman，\textsf{Latin Modern Sans Serif}和\texttt{Latin Modern Sans Typerwriter}\footnote{Latin Modern系列字体是Computer Modern系列字体的加强版本，后者是早期Donald E. Knuth在开发{\TeX}排版系统时所开发的系列字体。}，其中Latin Modern Roman为常规默认的英文字体。表 \ref{tab_font_style} 中列出了一些字体设置命令以及相应的样式。一些字体设置命令的声明形式有它们对应的简化形式，分别是：\verb"\rm" 等价于 \verb"\rmfamily"，\verb"\sf" 等价于 \verb"\sffamily"，\verb"\tt" 等价于 \verb"\ttfamily"，\verb"\bf" 等价于 \verb"\bfseries"，\verb"\it" 等价于 \verb"\itshape"，\verb"\sc" 等价于 \verb"\scshape"，\verb"\sl" 等价于 \verb"\slshape"。这些等价形式的命令在有些复合字体设置情况下和原有形式其实并不能做到完全意义上的等价，所以使用须谨慎。和中文字体设置一样，一些英文字体设置命令可以作为环境名，组成字体设置环境，例如加粗环境
 \begin{lstlisting}[language=TeX]
 \begin{bfseries}
 这是字体加粗环境
@@ -31,7 +31,7 @@
 参数形式 & 声明形式 & 字样 & 说明 \bigstrut \\ \hline
 \verb"\textrm{}" & \verb"\rmfamily" & \textrm{Roman Family} & 罗马体字族 \bigstrut \\ \hline
 \verb"\textsf{}" & \verb"\sffamily" & \textsf{San Serif Family} & 等线体字族 \bigstrut \\ \hline
-\verb"\texttt{}" & \verb"\ttfamily" & \texttt{Typewriter Family} & 罗宽体字族 \bigstrut \\ \hline
+\verb"\texttt{}" & \verb"\ttfamily" & \texttt{Typewriter Family} & 等宽体字族 \bigstrut \\ \hline
 \verb"\textbf{}" & \verb"\bfseries" & \textbf{Boldface Series} & 粗宽序列 \bigstrut \\ \hline
 \verb"\textmd{}" & \verb"\mdseries" & \textmd{Medium Series} & 常规序列 \bigstrut \\ \hline
 \verb"\textit{}" & \verb"\itshape"  & \textit{Italic Shape} & 斜体形状 \bigstrut \\ \hline

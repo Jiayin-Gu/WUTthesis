@@ -14,7 +14,7 @@
 \RequirePackage{xkeyval}
 \RequirePackage{changepage}
 \end{lstlisting}
-这表示\texttt{geometry}、\texttt{fancyhdr}、\texttt{xkeyval}、\texttt{changepage}四个宏包会被加载，因此当在\texttt{Thesis.tex}中无需再加载。其中，宏包\texttt{geometry}的参数设置了版心的大小为$160mm\times 230mm$，距离A4指左边距离$28mm$（意思是靠书脊一侧空白为$28mm$），上下空白比例$1:1$。这里有必要提一下A4纸张的大小为$210mm\times 297mm$，根据设定的版心大小和位置，内测的空白为$28mm$，靠外的空白为$22mm$，这样的不对称是为了补偿论文打印胶装后由于书脊的存在而造成整个版面内测的损失。然而，对于第一页的封面，我们又通过\texttt{changepage}宏包提供的\texttt{adjustwidth}环境调整了版心位置，使其居中。自制的\texttt{WUTthesis}中对页眉进行了设置，使得相应文字为灰色、宋体、字号小五，还将页码设置为每页底部居中。另外，还通过{\STZhongsong 华文中宋}字体文件\texttt{STZhongsong.ttf}定义了相应的字体。这里，鼓励用户查看\texttt{WUTthesis.sty}，了解具体细节。
+这表示\texttt{geometry}、\texttt{fancyhdr}、\texttt{xkeyval}、\texttt{changepage}四个宏包会被加载，因此当在\texttt{Thesis.tex}中无需再加载。其中，宏包\texttt{geometry}的参数设置了版心的大小为$160mm\times 230mm$，距离A4指左边距离$28mm$（意思是靠书脊一侧空白为$28mm$），上下空白比例$1:1$。这里有必要提一下A4纸张的大小为$210mm\times 297mm$，根据设定的版心大小和位置，内侧的空白为$28mm$，靠外的空白为$22mm$，这样的不对称是为了补偿论文打印胶装后由于书脊的存在而造成整个版面内测的损失。然而，对于第一页的封面，我们又通过\texttt{changepage}宏包提供的\texttt{adjustwidth}环境调整了版心位置，使其居中。自制的\texttt{WUTthesis}中对页眉进行了设置，使得相应文字为灰色、宋体、字号小五，还将页码设置为每页底部居中。另外，还通过{\STZhongsong 华文中宋}字体文件\texttt{STZhongsong.ttf}定义了相应的字体。这里，鼓励用户查看\texttt{WUTthesis.sty}，了解具体细节。
 
 
 

@@ -36,7 +36,7 @@
 
 
 
-\setCJKfamilyfont{STZhongsong}{[STZhongsong.ttf]} %% 从华文中宋字体文件STZhongsong.ttf中取字，来定义相应字体，对应的字体设置命令为\CJKfamily{STZhongsong}
+\setCJKfamilyfont{STZhongsong}{STZhongsong.ttf} %% 从华文中宋字体文件STZhongsong.ttf中取字，来定义相应字体，对应的字体设置命令为\CJKfamily{STZhongsong}
 \newcommand{\STZhongsong}{\CJKfamily{STZhongsong}} %% 将\CJKfamily{STZhongsong}重新定义为更为简洁的\STZhongsong
 
 
@@ -235,13 +235,13 @@ Wuhan 430070, Hubei, P. R. China \\
 ﻿\begin{titlepage}
 \begin{center}
 \begin{minipage}[t][20mm][t]{60mm}
-{\kaishu\zihao{4} 分类号} \CJKunderline{\makebox[30mm]{\wutclassificationnumber}} \\
-UDC \CJKunderline{\makebox[36mm]{\wutUDC}}
+{\kaishu\zihao{4} 分类号} \underline{\makebox[30mm]{\wutclassificationnumber}} \\
+UDC\hspace{5mm} \underline{\makebox[30mm]{\wutUDC}}
 \end{minipage}
 \hfill
 \begin{minipage}[t][20mm][t]{60mm}
-{\kaishu\zihao{4} 密\hspace{9mm}级} \CJKunderline{\makebox[30mm]{\wutconfidentiality}} \\
-{\kaishu\zihao{4} 学校代码} \CJKunderline{\makebox[30mm]{\wutuniversitycode}} 
+{\kaishu\zihao{4} 密\hspace{9mm}级} \underline{\makebox[30mm]{\wutconfidentiality}} \\
+{\kaishu\zihao{4} 学校代码} \underline{\makebox[30mm]{\wutuniversitycode}} 
 \end{minipage} \\
 \vspace{20mm}
 \begin{center}
@@ -252,7 +252,7 @@ UDC \CJKunderline{\makebox[36mm]{\wutUDC}}
 \vspace{30mm}
 \begin{spacing}{1.5}
 \zihao{4}\STZhongsong
-\noindent 题目 \CJKunderline{\makebox[136mm]{\kaishu\wutChinesetitle}} \\
+\noindent 题目 \underline{\makebox[136mm]{\kaishu\wutChinesetitle}} \\
 \noindent\begin{minipage}[c][20mm][c]{10mm}
 \vspace{5mm}
 \begin{spacing}{1.0}
@@ -265,32 +265,32 @@ UDC \CJKunderline{\makebox[36mm]{\wutUDC}}
 \vspace{5mm}
 \begin{spacing}{1.0}
 \makebox[136mm]{\wutEnglishtitlefirstline} \\
-\CJKunderline{\makebox[136mm]{\wutEnglishtitlesecondline}}
+\underline{\makebox[136mm]{\wutEnglishtitlesecondline}}
 \end{spacing}
 \end{minipage} \\
-\noindent 研究生姓名 \CJKunderline{\makebox[121mm]{\kaishu\wutauthorChinesename}} \\
+\noindent 研究生姓名 \underline{\makebox[121mm]{\kaishu\wutauthorChinesename}} \\
 \noindent\begin{minipage}[c][19mm][c]{25mm}
 指导教师
 \end{minipage}
 \begin{minipage}[c][19mm][c]{121mm}
-姓名 \CJKunderline{\makebox[45mm]{\kaishu\wutsupervisorChinesename}} 职称 \CJKunderline{\makebox[20mm]{\kaishu\wutsupervisortitle}} 学位 \CJKunderline{\makebox[20mm]{\kaishu\wutsupervisordegree}} \\
-单位名称 \CJKunderline{\makebox[68mm]{\kaishu\wutsupervisororganization}} 邮编 \CJKunderline{\makebox[20mm]{\kaishu\wutsupervisorzipcode}}
+姓名 \underline{\makebox[45mm]{\kaishu\wutsupervisorChinesename}} 职称 \underline{\makebox[20mm]{\kaishu\wutsupervisortitle}} 学位 \underline{\makebox[20mm]{\kaishu\wutsupervisordegree}} \\
+单位名称 \underline{\makebox[68mm]{\kaishu\wutsupervisororganization}} 邮编 \underline{\makebox[20mm]{\kaishu\wutsupervisorzipcode}}
 \end{minipage} \\
 \ifthenelse{\equal{\wutvicesupervisorswitch}{on}}{
 \vspace{-2mm}\begin{minipage}[c][19mm][c]{25mm}
 副指导教师
 \end{minipage}
 \begin{minipage}[c][19mm][c]{121mm}
-姓名 \CJKunderline{\makebox[45mm]{\kaishu\wutvicesupervisorname}} 职称 \CJKunderline{\makebox[20mm]{\kaishu\wutvicesupervisortitle}} 学位 \CJKunderline{\makebox[20mm]{\kaishu\wutvicesupervisordegree}} \\
-单位名称 \CJKunderline{\makebox[68mm]{\kaishu\wutvicesupervisororganization}} 邮编 \CJKunderline{\makebox[20mm]{\kaishu\wutvicesupervisorzipcode}}
+姓名 \underline{\makebox[45mm]{\kaishu\wutvicesupervisorname}} 职称 \underline{\makebox[20mm]{\kaishu\wutvicesupervisortitle}} 学位 \underline{\makebox[20mm]{\kaishu\wutvicesupervisordegree}} \\
+单位名称 \underline{\makebox[68mm]{\kaishu\wutvicesupervisororganization}} 邮编 \underline{\makebox[20mm]{\kaishu\wutvicesupervisorzipcode}}
 \end{minipage} \\}{}
-\noindent 申请学位级别 \CJKunderline{\makebox[42mm]{\kaishu \wutChinesedegree}} 学科专业名称 \CJKunderline{\makebox[42mm]{\kaishu\wutmajorChinesename}} \\
-\noindent 论文提交日期 \CJKunderline{\makebox[42mm]{\kaishu\wutdateofthesissubmission}} 论文答辩日期 \CJKunderline{\makebox[42mm]{\kaishu\wutdateofthesisdefense}} \\
-\noindent 学位授予单位 \CJKunderline{\makebox[42mm]{\kaishu\wutdegreeorganization}} 学位授予日期 \CJKunderline{\makebox[42mm]{\kaishu\wutdateofdegreeaward}} \\
-\noindent 答辩委员会主席 \CJKunderline{\makebox[42mm]{\kaishu\wutcommitteechairman}} 评阅人
+\noindent 申请学位级别 \underline{\makebox[42mm]{\kaishu \wutChinesedegree}} 学科专业名称 \underline{\makebox[42mm]{\kaishu\wutmajorChinesename}} \\
+\noindent 论文提交日期 \underline{\makebox[42mm]{\kaishu\wutdateofthesissubmission}} 论文答辩日期 \underline{\makebox[42mm]{\kaishu\wutdateofthesisdefense}} \\
+\noindent 学位授予单位 \underline{\makebox[42mm]{\kaishu\wutdegreeorganization}} 学位授予日期 \underline{\makebox[42mm]{\kaishu\wutdateofdegreeaward}} \\
+\noindent 答辩委员会主席 \underline{\makebox[42mm]{\kaishu\wutcommitteechairman}} 评阅人
 \begin{minipage}[t][20mm][t]{52mm}
-\CJKunderline{\makebox[52mm]{\kaishu\wutfirstreviewer}} \\
-\CJKunderline{\makebox[52mm]{\kaishu\wutsecondreviewer}}
+\underline{\makebox[52mm]{\kaishu\wutfirstreviewer}} \\
+\underline{\makebox[52mm]{\kaishu\wutsecondreviewer}}
 \end{minipage}
 \end{spacing}
 {\hspace{50mm}\zihao{4}\STZhongsong\wutdateofthesiscompletion}

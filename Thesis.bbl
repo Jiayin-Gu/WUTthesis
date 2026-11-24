@@ -1,5 +1,5 @@
 % $ biblatex auxiliary file $
-% $ biblatex bbl format version 3.0 $
+% $ biblatex bbl format version 3.3 $
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
@@ -18,9 +18,14 @@
 
 
 \refsection{0}
-  \datalist[entry]{none/global//global/global}
-    \entry{Hu_2013}{book}{}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{Hu_2013}{book}{}{}
       \name{author}{1}{}{%
+        {{hash=fca9a855260a279113b5ae0e79b5664c}{%
+           family={胡伟},
+           familyi={胡\bibinitperiod}}}%
+      }
+      \name{namea}{1}{}{%
         {{hash=fca9a855260a279113b5ae0e79b5664c}{%
            family={胡伟},
            familyi={胡\bibinitperiod}}}%
@@ -36,16 +41,24 @@
       }
       \strng{namehash}{fca9a855260a279113b5ae0e79b5664c}
       \strng{fullhash}{fca9a855260a279113b5ae0e79b5664c}
+      \strng{fullhashraw}{fca9a855260a279113b5ae0e79b5664c}
       \strng{bibnamehash}{fca9a855260a279113b5ae0e79b5664c}
       \strng{authorbibnamehash}{fca9a855260a279113b5ae0e79b5664c}
       \strng{authornamehash}{fca9a855260a279113b5ae0e79b5664c}
       \strng{authorfullhash}{fca9a855260a279113b5ae0e79b5664c}
+      \strng{authorfullhashraw}{fca9a855260a279113b5ae0e79b5664c}
+      \strng{nameabibnamehash}{fca9a855260a279113b5ae0e79b5664c}
+      \strng{nameanamehash}{fca9a855260a279113b5ae0e79b5664c}
+      \strng{nameafullhash}{fca9a855260a279113b5ae0e79b5664c}
+      \strng{nameafullhashraw}{fca9a855260a279113b5ae0e79b5664c}
       \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{第二版}
       \field{langid}{english}
+      \field{languageid}{chinese}
+      \field{lansortorder}{1}
       \field{title}{{\LaTeXe} 完全学习手册}
       \field{usera}{M}
       \field{userd}{chinese}
@@ -54,8 +67,13 @@
       \field{dateera}{ce}
       \keyw{Hu_2013}
     \endentry
-    \entry{Liu_2013}{book}{}
+    \entry{Liu_2013}{book}{}{}
       \name{author}{1}{}{%
+        {{hash=a614dd2ab592283bdd97d70ffb8c2f3a}{%
+           family={刘海洋},
+           familyi={刘\bibinitperiod}}}%
+      }
+      \name{namea}{1}{}{%
         {{hash=a614dd2ab592283bdd97d70ffb8c2f3a}{%
            family={刘海洋},
            familyi={刘\bibinitperiod}}}%
@@ -71,15 +89,23 @@
       }
       \strng{namehash}{a614dd2ab592283bdd97d70ffb8c2f3a}
       \strng{fullhash}{a614dd2ab592283bdd97d70ffb8c2f3a}
+      \strng{fullhashraw}{a614dd2ab592283bdd97d70ffb8c2f3a}
       \strng{bibnamehash}{a614dd2ab592283bdd97d70ffb8c2f3a}
       \strng{authorbibnamehash}{a614dd2ab592283bdd97d70ffb8c2f3a}
       \strng{authornamehash}{a614dd2ab592283bdd97d70ffb8c2f3a}
       \strng{authorfullhash}{a614dd2ab592283bdd97d70ffb8c2f3a}
+      \strng{authorfullhashraw}{a614dd2ab592283bdd97d70ffb8c2f3a}
+      \strng{nameabibnamehash}{a614dd2ab592283bdd97d70ffb8c2f3a}
+      \strng{nameanamehash}{a614dd2ab592283bdd97d70ffb8c2f3a}
+      \strng{nameafullhash}{a614dd2ab592283bdd97d70ffb8c2f3a}
+      \strng{nameafullhashraw}{a614dd2ab592283bdd97d70ffb8c2f3a}
       \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{langid}{english}
+      \field{languageid}{chinese}
+      \field{lansortorder}{1}
       \field{title}{LaTeX 入门}
       \field{usera}{M}
       \field{userd}{chinese}
@@ -88,8 +114,15 @@
       \field{dateera}{ce}
       \keyw{Liu_2013}
     \endentry
-    \entry{Knuth_1986}{book}{}
+    \entry{Knuth_1986}{book}{}{}
       \name{author}{1}{}{%
+        {{hash=ec08e6f01da5f3814f28a70c89c64656}{%
+           family={Knuth},
+           familyi={K\bibinitperiod},
+           given={Donald\bibnamedelima E.},
+           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \name{namea}{1}{}{%
         {{hash=ec08e6f01da5f3814f28a70c89c64656}{%
            family={Knuth},
            familyi={K\bibinitperiod},
@@ -104,15 +137,23 @@
       }
       \strng{namehash}{ec08e6f01da5f3814f28a70c89c64656}
       \strng{fullhash}{ec08e6f01da5f3814f28a70c89c64656}
+      \strng{fullhashraw}{ec08e6f01da5f3814f28a70c89c64656}
       \strng{bibnamehash}{ec08e6f01da5f3814f28a70c89c64656}
       \strng{authorbibnamehash}{ec08e6f01da5f3814f28a70c89c64656}
       \strng{authornamehash}{ec08e6f01da5f3814f28a70c89c64656}
       \strng{authorfullhash}{ec08e6f01da5f3814f28a70c89c64656}
+      \strng{authorfullhashraw}{ec08e6f01da5f3814f28a70c89c64656}
+      \strng{nameabibnamehash}{ec08e6f01da5f3814f28a70c89c64656}
+      \strng{nameanamehash}{ec08e6f01da5f3814f28a70c89c64656}
+      \strng{nameafullhash}{ec08e6f01da5f3814f28a70c89c64656}
+      \strng{nameafullhashraw}{ec08e6f01da5f3814f28a70c89c64656}
       \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
       \field{title}{Computers \& Typesetting, Volume A: The TeXbook}
       \field{usera}{M}
       \field{userd}{english}
@@ -121,8 +162,35 @@
       \field{dateera}{ce}
       \keyw{Knuth_1986}
     \endentry
-    \entry{Mittelbach_2004}{book}{}
+    \entry{Mittelbach_2004}{book}{}{}
       \name{author}{5}{}{%
+        {{hash=9355edd511e3f6fdd880ee98722a53fb}{%
+           family={Mittelbach},
+           familyi={M\bibinitperiod},
+           given={Frank},
+           giveni={F\bibinitperiod}}}%
+        {{hash=0743efb276e9219ee664a9b3dbd60619}{%
+           family={Goossens},
+           familyi={G\bibinitperiod},
+           given={Michel},
+           giveni={M\bibinitperiod}}}%
+        {{hash=d52f183a29af96d48695b8bea23e66e1}{%
+           family={Braams},
+           familyi={B\bibinitperiod},
+           given={Johannes},
+           giveni={J\bibinitperiod}}}%
+        {{hash=3094f4812cc660f7320fd1ab3d3da906}{%
+           family={Carlisle},
+           familyi={C\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=0907be26d21af9e9c3820d51f421fe33}{%
+           family={Rowley},
+           familyi={R\bibinitperiod},
+           given={Chris},
+           giveni={C\bibinitperiod}}}%
+      }
+      \name{namea}{5}{}{%
         {{hash=9355edd511e3f6fdd880ee98722a53fb}{%
            family={Mittelbach},
            familyi={M\bibinitperiod},
@@ -157,16 +225,24 @@
       }
       \strng{namehash}{f6d3f5d3a9cc39507a7ff2f9963883dc}
       \strng{fullhash}{81b7ecc7e76086895ab856756307e8bc}
+      \strng{fullhashraw}{81b7ecc7e76086895ab856756307e8bc}
       \strng{bibnamehash}{d068a4a19e32ac6a68e851d4c89b7dd1}
       \strng{authorbibnamehash}{d068a4a19e32ac6a68e851d4c89b7dd1}
       \strng{authornamehash}{f6d3f5d3a9cc39507a7ff2f9963883dc}
       \strng{authorfullhash}{81b7ecc7e76086895ab856756307e8bc}
+      \strng{authorfullhashraw}{81b7ecc7e76086895ab856756307e8bc}
+      \strng{nameabibnamehash}{d068a4a19e32ac6a68e851d4c89b7dd1}
+      \strng{nameanamehash}{f6d3f5d3a9cc39507a7ff2f9963883dc}
+      \strng{nameafullhash}{81b7ecc7e76086895ab856756307e8bc}
+      \strng{nameafullhashraw}{81b7ecc7e76086895ab856756307e8bc}
       \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{Second}
       \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
       \field{title}{The {\LaTeX} Companion (Tools and Techniques for Computer Typesetting)}
       \field{usera}{M}
       \field{userd}{english}
@@ -175,8 +251,15 @@
       \field{dateera}{ce}
       \keyw{Mittelbach_2004}
     \endentry
-    \entry{Feynman_RevModPhys_1948}{article}{}
+    \entry{Feynman_RevModPhys_1948}{article}{}{}
       \name{author}{1}{}{%
+        {{hash=bc0435d3e01ddd86761bcf1fc818ecf1}{%
+           family={Feynman},
+           familyi={F\bibinitperiod},
+           given={R.\bibnamedelimi P.},
+           giveni={R\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \name{namea}{1}{}{%
         {{hash=bc0435d3e01ddd86761bcf1fc818ecf1}{%
            family={Feynman},
            familyi={F\bibinitperiod},
@@ -188,16 +271,24 @@
       }
       \strng{namehash}{bc0435d3e01ddd86761bcf1fc818ecf1}
       \strng{fullhash}{bc0435d3e01ddd86761bcf1fc818ecf1}
+      \strng{fullhashraw}{bc0435d3e01ddd86761bcf1fc818ecf1}
       \strng{bibnamehash}{bc0435d3e01ddd86761bcf1fc818ecf1}
       \strng{authorbibnamehash}{bc0435d3e01ddd86761bcf1fc818ecf1}
       \strng{authornamehash}{bc0435d3e01ddd86761bcf1fc818ecf1}
       \strng{authorfullhash}{bc0435d3e01ddd86761bcf1fc818ecf1}
+      \strng{authorfullhashraw}{bc0435d3e01ddd86761bcf1fc818ecf1}
+      \strng{nameabibnamehash}{bc0435d3e01ddd86761bcf1fc818ecf1}
+      \strng{nameanamehash}{bc0435d3e01ddd86761bcf1fc818ecf1}
+      \strng{nameafullhash}{bc0435d3e01ddd86761bcf1fc818ecf1}
+      \strng{nameafullhashraw}{bc0435d3e01ddd86761bcf1fc818ecf1}
       \field{sortinit}{2}
-      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Reviews of Modern Physics}
       \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
       \field{title}{Space-time Approach to Non-relativistic Quantum Mechanics}
       \field{usera}{J}
       \field{userd}{english}
